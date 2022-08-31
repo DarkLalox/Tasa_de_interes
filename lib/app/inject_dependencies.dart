@@ -6,6 +6,8 @@ import 'package:tesis_1/app/data/repositories_impl/sign_up_repository_impl.dart'
 import 'package:tesis_1/app/domain/repositories/account_repository.dart';
 import 'package:tesis_1/app/domain/repositories/authentication_repository.dart';
 import 'package:tesis_1/app/domain/repositories/sign_up_repository.dart';
+import 'package:tesis_1/app/domain/repositories/email_repository.dart';
+import 'package:tesis_1/app/data/repositories_impl/email_repository_impl.dart';
 
 void injectDependencies() {
   Get.lazyPut<AuthenticationRepository>(
@@ -19,5 +21,8 @@ void injectDependencies() {
     () => AccountRepositoryImpl(
       FirebaseAuth.instance,
     ),
+  );
+  Get.lazyPut<EmailRepository>(
+    () => EmailRepositoryImpl(FirebaseAuth.instance),
   );
 }

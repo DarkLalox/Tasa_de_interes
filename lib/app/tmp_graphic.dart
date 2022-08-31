@@ -1,5 +1,5 @@
 // ignore_for_file: prefer_const_constructors
-
+/*
 import 'package:charts_flutter/flutter.dart' as charts;
 import 'package:flutter/material.dart';
 
@@ -58,4 +58,4 @@ class TimeSeriesSales {
   final double value;
 
   TimeSeriesSales(this.time, this.value);
-}
+}*/

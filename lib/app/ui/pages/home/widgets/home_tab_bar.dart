@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_meedu/ui.dart';
+import 'package:tesis_1/app/ui/global_controllers/theme_controller.dart';
 import 'package:tesis_1/app/ui/pages/home/home_page.dart';
 
 class HomeTabBar extends StatelessWidget {
@@ -7,12 +9,13 @@ class HomeTabBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final isDark = context.isDarkMode;
     return SafeArea(
       top: false,
       child: TabBar(
         labelColor: Colors.blue,
         indicator: _CustomIndicator(),
-        unselectedLabelColor: Colors.black26,
+        unselectedLabelColor: isDark ? Colors.white30 : Colors.black26,
         tabs: const [
           Tab(
             icon: Icon(Icons.home_rounded),

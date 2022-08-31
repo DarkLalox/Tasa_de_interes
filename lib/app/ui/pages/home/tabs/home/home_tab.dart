@@ -15,11 +15,11 @@ class HomeTab extends StatelessWidget {
           const Text("Gráfico TPM"),
           const SizedBox(height: 20),
           Center(
-            child: SizedBox(
+              /*child: SizedBox(
                 height: 350.0,
                 width: 350.0,
-                child: SimpleTimeSeriesChart.withSampleData()),
-          ),
+                child: SimpleTimeSeriesChart.withSampleData()),*/
+              ),
           const SizedBox(height: 100),
         ],
       ),

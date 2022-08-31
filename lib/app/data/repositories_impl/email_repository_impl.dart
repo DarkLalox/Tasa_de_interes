@@ -1,17 +1,17 @@
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:tesis_1/app/domain/repositories/account_repository.dart';
+import 'package:tesis_1/app/domain/repositories/email_repository.dart';
 
-class AccountRepositoryImpl implements AccountRepository {
+class EmailRepositoryImpl implements EmailRepository {
   final FirebaseAuth _auth;
 
-  AccountRepositoryImpl(this._auth);
+  EmailRepositoryImpl(this._auth);
 
   @override
-  Future<User?> updateDisplayName(String value) async {
+  Future<User?> updateEmail(String value) async {
     try {
       final user = _auth.currentUser;
       assert(user != null);
-      await user!.updateDisplayName(value);
+      await user!.updateEmail(value);
       user.reload();
       return _auth.currentUser;
     } catch (e) {
