@@ -6,6 +6,7 @@ import 'package:tesis_1/app/ui/global_controllers/theme_controller.dart';
 import 'package:tesis_1/app/ui/global_widgets/dialogs/dialogs.dart';
 import 'package:tesis_1/app/ui/global_widgets/dialogs/progress_dialog.dart';
 import 'package:tesis_1/app/ui/global_widgets/dialogs/show_input_dialog.dart';
+import 'package:tesis_1/app/ui/pages/home/tabs/profile/widgets/label_button.dart';
 import 'package:tesis_1/app/ui/routes/routes.dart';
 
 class ProfileTab extends ConsumerWidget {
@@ -59,6 +60,7 @@ class ProfileTab extends ConsumerWidget {
     final SessionController = sessionProvider.read;
     final value = await showInputDialog(
       context,
+      initialValue: SessionController.user!.email ?? "",
     );
     if (value != null) {
       ProgressDialog.show(context);
@@ -128,11 +130,20 @@ class ProfileTab extends ConsumerWidget {
           label: "Correo electrónico verificado",
           value: user.emailVerified ? "YES" : "NO",
         ),
-        CupertinoSwitch(
-          value: isDark,
-          onChanged: (_) {
-            themeProvider.read.toggle();
-          },
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 5),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              const Text("Modo Oscuro"),
+              CupertinoSwitch(
+                value: isDark,
+                onChanged: (_) {
+                  themeProvider.read.toggle();
+                },
+              ),
+            ],
+          ),
         ),
         LabelButton(
           label: "Cerrar sesión",
@@ -143,48 +154,6 @@ class ProfileTab extends ConsumerWidget {
           },
         ),
       ],
-    );
-  }
-}
-
-class LabelButton extends StatelessWidget {
-  final String label, value;
-  final VoidCallback? onPressed;
-  const LabelButton({
-    Key? key,
-    required this.label,
-    required this.value,
-    this.onPressed,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    final isDark = context.isDarkMode;
-    final iconColor = isDark ? Colors.white30 : Colors.black45;
-    return ListTile(
-      onTap: onPressed,
-      contentPadding: const EdgeInsets.symmetric(vertical: 0, horizontal: 20),
-      leading: Text(
-        label,
-        style: const TextStyle(fontWeight: FontWeight.w500),
-      ),
-      trailing: Row(
-        mainAxisSize: MainAxisSize.min,
-        children: [
-          Text(
-            value,
-            style: const TextStyle(
-              fontWeight: FontWeight.w300,
-            ),
-          ),
-          const SizedBox(width: 5),
-          Icon(
-            Icons.chevron_right_rounded,
-            size: 22,
-            color: onPressed != null ? iconColor : Colors.transparent,
-          )
-        ],
-      ),
     );
   }
 }

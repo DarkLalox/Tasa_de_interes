@@ -23,7 +23,6 @@ class RegisterPage extends StatelessWidget {
       provider: registerProvider,
       builder: (_, controller) {
         return Scaffold(
-          backgroundColor: Colors.white,
           appBar: AppBar(),
           body: GestureDetector(
             onTap: () => FocusScope.of(context).unfocus(),
