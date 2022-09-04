@@ -11,6 +11,48 @@ class ThemeController extends SimpleNotifier {
   final PreferencesRepository _preferences = Get.find();
   ThemeMode get mode => _mode;
   bool get isDark => _mode == ThemeMode.dark;
+
+  ThemeData get lightTheme {
+    return ThemeData.light().copyWith(
+      inputDecorationTheme: const InputDecorationTheme(
+        focusedBorder: UnderlineInputBorder(
+          borderSide: BorderSide(
+            color: Colors.blue,
+          ),
+        ),
+        enabledBorder: UnderlineInputBorder(
+          borderSide: BorderSide(
+            color: Colors.black12,
+          ),
+        ),
+      ),
+    );
+  }
+
+  ThemeData get darkTheme {
+    return ThemeData.dark().copyWith(
+      scaffoldBackgroundColor: const Color(0xff1b1b1b),
+      primaryColorDark: Colors.red,
+      textSelectionTheme: const TextSelectionThemeData(
+        cursorColor: Colors.red,
+      ),
+      colorScheme: ColorScheme.fromSwatch(
+          brightness: Brightness.dark, primarySwatch: Colors.red),
+      inputDecorationTheme: const InputDecorationTheme(
+        focusedBorder: UnderlineInputBorder(
+          borderSide: BorderSide(
+            color: Colors.red,
+          ),
+        ),
+        enabledBorder: UnderlineInputBorder(
+          borderSide: BorderSide(
+            color: Colors.white54,
+          ),
+        ),
+      ),
+    );
+  }
+
   void toggle() {
     if (_mode == ThemeMode.light) {
       _mode = ThemeMode.dark;

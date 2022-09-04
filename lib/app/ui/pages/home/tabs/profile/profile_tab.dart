@@ -138,6 +138,7 @@ class ProfileTab extends ConsumerWidget {
               const Text("Modo Oscuro"),
               CupertinoSwitch(
                 value: isDark,
+                activeColor: isDark ? Colors.red : Colors.blue,
                 onChanged: (_) {
                   themeProvider.read.toggle();
                 },

@@ -16,8 +16,8 @@ class MyApp extends StatelessWidget {
         navigatorKey: router.navigatorKey,
         debugShowCheckedModeBanner: false,
         initialRoute: Routes.SPLASH,
-        darkTheme: ThemeData.dark(),
-        theme: ThemeData.light(),
+        darkTheme: theme.darkTheme,
+        theme: theme.lightTheme,
         themeMode: theme.mode,
         navigatorObservers: [
           router.observer,

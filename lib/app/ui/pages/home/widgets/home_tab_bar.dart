@@ -10,11 +10,12 @@ class HomeTabBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final isDark = context.isDarkMode;
+    final color = isDark ? Colors.red : Colors.blue;
     return SafeArea(
       top: false,
       child: TabBar(
-        labelColor: Colors.blue,
-        indicator: _CustomIndicator(),
+        labelColor: color,
+        indicator: _CustomIndicator(color),
         unselectedLabelColor: isDark ? Colors.white30 : Colors.black26,
         tabs: const [
           Tab(
@@ -31,13 +32,19 @@ class HomeTabBar extends StatelessWidget {
 }
 
 class _CustomIndicator extends Decoration {
+  final Color _color;
+
+  const _CustomIndicator(this._color);
   @override
   BoxPainter createBoxPainter([VoidCallback? onChanged]) {
-    return _CirclePainter();
+    return _CirclePainter(_color);
   }
 }
 
 class _CirclePainter extends BoxPainter {
+  final Color _color;
+
+  _CirclePainter(this._color);
   @override
   void paint(
     Canvas canvas,
@@ -46,7 +53,7 @@ class _CirclePainter extends BoxPainter {
   ) {
     final size = configuration.size!;
     final paint = Paint();
-    paint.color = Colors.blue;
+    paint.color = _color;
     final center = Offset(offset.dx + size.width * 0.5, size.height * 0.8);
     canvas.drawCircle(center, 3, paint);
   }

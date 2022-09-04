@@ -1,4 +1,6 @@
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_meedu/ui.dart';
 
 Future<String?> showInputDialog(
   BuildContext context, {
@@ -6,14 +8,17 @@ Future<String?> showInputDialog(
   String? initialValue,
 }) async {
   String value = initialValue ?? '';
-  TextEditingController controller = TextEditingController();
-  controller.text = value;
+  final isDarkMode = context.isDarkMode;
   final result = await showCupertinoDialog<String>(
     context: context,
     builder: (context) => CupertinoAlertDialog(
       title: title != null ? Text(title) : null,
       content: CupertinoTextField(
-        controller: controller,
+        controller: TextEditingController()..text = initialValue ?? '',
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(5),
+          color: isDarkMode ? const Color(0xff9e9e9e) : Colors.white70,
+        ),
         onChanged: (text) {
           value = text;
         },

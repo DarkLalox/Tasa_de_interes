@@ -98,9 +98,8 @@ class RegisterPage extends StatelessWidget {
                       },
                     ),
                     const SizedBox(height: 30),
-                    CupertinoButton(
+                    ElevatedButton(
                       child: const Text("Registro"),
-                      color: Colors.blue,
                       onPressed: () => sendRegisterForm(context),
                     ),
                   ],
