@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_meedu/meedu.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:tesis_1/app/domain/repositories/preferences_repository.dart';
 
 class ThemeController extends SimpleNotifier {
