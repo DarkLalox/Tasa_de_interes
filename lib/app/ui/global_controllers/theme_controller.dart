@@ -15,6 +15,11 @@ class ThemeController extends SimpleNotifier {
 
   ThemeData get lightTheme {
     return ThemeData.light().copyWith(
+      appBarTheme: const AppBarTheme(
+        elevation: 0,
+        backgroundColor: Colors.white10,
+        iconTheme: IconThemeData(color: Colors.blue),
+      ),
       inputDecorationTheme: const InputDecorationTheme(
         focusedBorder: UnderlineInputBorder(
           borderSide: BorderSide(
@@ -32,6 +37,11 @@ class ThemeController extends SimpleNotifier {
 
   ThemeData get darkTheme {
     return ThemeData.dark().copyWith(
+      appBarTheme: const AppBarTheme(
+        backgroundColor: Color(0xff1b1b1b),
+        elevation: 0,
+        iconTheme: IconThemeData(color: Colors.red),
+      ),
       scaffoldBackgroundColor: const Color(0xff1b1b1b),
       primaryColorDark: Colors.red,
       textSelectionTheme: const TextSelectionThemeData(

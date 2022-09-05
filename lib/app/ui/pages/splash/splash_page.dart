@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_meedu/meedu.dart';
 import 'package:flutter_meedu/ui.dart';
 import 'package:tesis_1/app/ui/global_controllers/session_controller.dart';
@@ -15,6 +16,13 @@ class SplashPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return ProviderListener<SplashController>(
       provider: splashProvider,
+      onAfterFirstLayout: (_, __) {
+        if (!context.isTablet) {
+          SystemChrome.setPreferredOrientations(
+            [DeviceOrientation.portraitUp, DeviceOrientation.portraitDown],
+          );
+        }
+      },
       onChange: (_, controller) {
         final routeName = controller.routeName;
         if (routeName != null) {
