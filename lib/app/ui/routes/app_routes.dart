@@ -1,5 +1,9 @@
 import 'package:flutter/widgets.dart';
 import 'package:tesis_1/app/ui/pages/home/home_page.dart';
+import 'package:tesis_1/app/ui/pages/home/tabs/home/graphic.dart';
+import 'package:tesis_1/app/ui/pages/home/tabs/home/interest_rate.dart';
+import 'package:tesis_1/app/ui/pages/home/tabs/home/language.dart';
+import 'package:tesis_1/app/ui/pages/home/tabs/home/news.dart';
 import 'package:tesis_1/app/ui/pages/login/login_page.dart';
 import 'package:tesis_1/app/ui/pages/register/register_page.dart';
 import 'package:tesis_1/app/ui/pages/reset_password/reset_password_page.dart';
@@ -12,4 +16,8 @@ Map<String, Widget Function(BuildContext)> get appRoutes => {
       Routes.HOME: (_) => const HomePage(),
       Routes.REGISTER: (_) => const RegisterPage(),
       Routes.RESET_PASSWORD: (_) => const ResetPasswordPage(),
+      Routes.INTEREST_RATE: (_) => const InterestRate(),
+      Routes.NEWS: (_) => const News(),
+      Routes.GRAPHIC: (_) => const Graphic(),
+      Routes.LANGUAGE: (_) => const Language(),
     };

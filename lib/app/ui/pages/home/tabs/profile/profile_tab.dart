@@ -93,7 +93,7 @@ class ProfileTab extends ConsumerWidget {
           child: user.photoURL == null
               ? Text(
                   letter,
-                  style: const TextStyle(fontSize: 65),
+                  style: const TextStyle(fontSize: 80),
                 )
               : null,
           backgroundImage:
