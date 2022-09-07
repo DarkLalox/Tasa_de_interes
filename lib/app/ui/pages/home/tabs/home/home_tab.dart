@@ -4,10 +4,10 @@ import 'package:flutter_meedu/ui.dart';
 import 'package:tesis_1/app/tmp_graphic.dart';
 import 'package:tesis_1/app/ui/global_controllers/session_controller.dart';
 import 'package:tesis_1/app/ui/pages/home/home_page.dart';
-import 'package:tesis_1/app/ui/pages/home/tabs/home/graphic.dart';
-import 'package:tesis_1/app/ui/pages/home/tabs/home/interest_rate.dart';
-import 'package:tesis_1/app/ui/pages/home/tabs/home/language.dart';
-import 'package:tesis_1/app/ui/pages/home/tabs/home/news.dart';
+import 'package:tesis_1/app/ui/pages/home/tabs/home/graphic_page.dart';
+import 'package:tesis_1/app/ui/pages/home/tabs/home/interest_rate_page.dart';
+import 'package:tesis_1/app/ui/pages/home/tabs/home/language_page.dart';
+import 'package:tesis_1/app/ui/pages/home/tabs/home/news/news_page.dart';
 import 'package:tesis_1/app/ui/routes/routes.dart';
 
 class HomeTab extends StatelessWidget {
@@ -110,7 +110,7 @@ class NavigationDrawer extends ConsumerWidget {
           Divider(color: isDark ? Colors.white : Colors.black54),
           ListTile(
             title: Text('Idioma'),
-            leading: Icon(Icons.library_add),
+            leading: Icon(Icons.language),
             onTap: () {
               router.push(Language());
             },

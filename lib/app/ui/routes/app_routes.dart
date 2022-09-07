@@ -1,9 +1,9 @@
 import 'package:flutter/widgets.dart';
 import 'package:tesis_1/app/ui/pages/home/home_page.dart';
-import 'package:tesis_1/app/ui/pages/home/tabs/home/graphic.dart';
-import 'package:tesis_1/app/ui/pages/home/tabs/home/interest_rate.dart';
-import 'package:tesis_1/app/ui/pages/home/tabs/home/language.dart';
-import 'package:tesis_1/app/ui/pages/home/tabs/home/news.dart';
+import 'package:tesis_1/app/ui/pages/home/tabs/home/graphic_page.dart';
+import 'package:tesis_1/app/ui/pages/home/tabs/home/interest_rate_page.dart';
+import 'package:tesis_1/app/ui/pages/home/tabs/home/language_page.dart';
+import 'package:tesis_1/app/ui/pages/home/tabs/home/news/news_page.dart';
 import 'package:tesis_1/app/ui/pages/login/login_page.dart';
 import 'package:tesis_1/app/ui/pages/register/register_page.dart';
 import 'package:tesis_1/app/ui/pages/reset_password/reset_password_page.dart';

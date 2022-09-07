@@ -7,5 +7,5 @@ abstract class Routes {
   static const INTEREST_RATE = '/interest-rate';
   static const NEWS = '/news';
   static const GRAPHIC = '/graphic';
-  static const LANGUAGE = '/Language';
+  static const LANGUAGE = '/language';
 }
