@@ -135,7 +135,12 @@ class ProfileTab extends ConsumerWidget {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              const Text("Modo Oscuro"),
+              const Text(
+                "Modo Oscuro",
+                style: TextStyle(
+                  fontWeight: FontWeight.w500,
+                ),
+              ),
               CupertinoSwitch(
                 value: isDark,
                 activeColor: isDark ? Colors.red : Colors.blue,

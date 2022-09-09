@@ -37,6 +37,7 @@ dependencies:
   firebase_core: "^1.18.0"
   firebase_auth: "^3.3.20"
   flutter_meedu: ^7.1.0
+  http: ^0.13.5
   freezed: ^2.0.3+1
   shared_preferences: ^2.0.15
   google_fonts: ^3.0.1
