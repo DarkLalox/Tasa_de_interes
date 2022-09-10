@@ -9,16 +9,28 @@ final newsService = SimpleProvider(
   (ref) => NewsService(),
 );
 
-class NationalTab extends StatelessWidget {
+class NationalTab extends StatefulWidget {
   const NationalTab({Key? key}) : super(key: key);
 
+  @override
+  State<NationalTab> createState() => _NationalTabState();
+}
+
+class _NationalTabState extends State<NationalTab>
+    with AutomaticKeepAliveClientMixin {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Consumer(builder: (_, ref, __) {
         final controller = ref.watch(newsService);
-        return List_News(controller.headlines);
+        return Scaffold(
+            body: (controller.headlines.length == 0)
+                ? Center(child: CircularProgressIndicator())
+                : List_News(controller.headlines));
       }),
     );
   }
+
+  @override
+  bool get wantKeepAlive => true;
 }
