@@ -9,6 +9,7 @@ class Graphic extends StatelessWidget {
       appBar: AppBar(
         title: const Text("Gráfico"),
       ),
+      body: const Text("listas"),
     );
   }
 }

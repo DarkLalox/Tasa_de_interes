@@ -22,3 +22,20 @@ class NewsService extends SimpleNotifier {
     notify();
   }
 }
+
+class NewsService2 extends SimpleNotifier {
+  List<Article> headlines2 = [];
+  NewsService2() {
+    this.getTopHeadline2();
+  }
+
+  getTopHeadline2() async {
+    final url =
+        '$_URL_NEWS/top-headlines?category=business&country=us&pageSize=10&apiKey=$_APIKEY';
+    final respuesta = await http.get(Uri.parse(url));
+    final newsResponse = newResponseFromJson(respuesta.body);
+
+    this.headlines2.addAll(newsResponse.articles);
+    notify();
+  }
+}

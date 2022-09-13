@@ -53,7 +53,7 @@ class Article {
   String url;
   String urlToImage;
   DateTime publishedAt;
-  String content;
+  String? content;
 
   factory Article.fromJson(Map<String, dynamic> json) => Article(
         source: Source.fromJson(json["source"]),
