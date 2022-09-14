@@ -17,6 +17,7 @@ class ThemeController extends SimpleNotifier {
     return ThemeData.light().copyWith(
       appBarTheme: const AppBarTheme(
         elevation: 0,
+        foregroundColor: Colors.black,
         backgroundColor: Colors.white10,
         iconTheme: IconThemeData(color: Colors.blue),
       ),

@@ -8,4 +8,10 @@ abstract class Routes {
   static const NEWS = '/news';
   static const GRAPHIC = '/graphic';
   static const LANGUAGE = '/language';
+  static const TPM = '/TPM';
+  static const TIB = '/TIB';
+  static const CONSUMER = '/consumer';
+  static const HOUSING = '/housing';
+  static const COMMERCIAL = '/commercial';
+  static const FOREIGN_TRADE = '/foreign-trade';
 }

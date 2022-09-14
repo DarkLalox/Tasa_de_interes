@@ -4,7 +4,7 @@ import 'package:flutter_meedu/ui.dart';
 import 'package:tesis_1/app/data/data_source/services/news_service.dart';
 import 'package:tesis_1/app/ui/pages/home/tabs/home/news/widgets/list_news.dart';
 
-final NewsService = SimpleProvider(
+final NewsService22 = SimpleProvider(
   (ref) => NewsService2(),
 );
 
@@ -21,7 +21,7 @@ class _InternationalTabState extends State<InternationalTab>
   Widget build(BuildContext context) {
     return Scaffold(
       body: Consumer(builder: (_, ref, __) {
-        final controller = ref.watch(NewsService);
+        final controller = ref.watch(NewsService22);
         return Scaffold(
             body: (controller.headlines2.length == 0)
                 ? Center(child: CircularProgressIndicator())

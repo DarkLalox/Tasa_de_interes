@@ -1,5 +1,6 @@
 import 'package:flutter/widgets.dart';
 import 'package:tesis_1/app/ui/pages/home/home_page.dart';
+import 'package:tesis_1/app/ui/pages/home/tabs/home/graphic/graphic_TPM.dart';
 import 'package:tesis_1/app/ui/pages/home/tabs/home/graphic_page.dart';
 import 'package:tesis_1/app/ui/pages/home/tabs/home/interest_rate_page.dart';
 import 'package:tesis_1/app/ui/pages/home/tabs/home/language_page.dart';
@@ -20,4 +21,5 @@ Map<String, Widget Function(BuildContext)> get appRoutes => {
       Routes.NEWS: (_) => const News(),
       Routes.GRAPHIC: (_) => const Graphic(),
       Routes.LANGUAGE: (_) => const Language(),
+      Routes.TPM: (_) => const Graphic_TPM(),
     };

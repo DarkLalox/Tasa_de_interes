@@ -1,3 +1,5 @@
+import 'dart:ffi';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_meedu/ui.dart';
 import 'package:tesis_1/app/domain/models/news_models.dart';
@@ -88,13 +90,12 @@ class _CardButtons extends StatelessWidget {
 
 class _CardBody extends StatelessWidget {
   final Article newss;
-
   const _CardBody(this.newss);
   @override
   Widget build(BuildContext context) {
     return Container(
         padding: const EdgeInsets.symmetric(horizontal: 20),
-        child: Text((newss.description != null) ? newss.description : ''));
+        child: Text((newss.description != null) ? newss.description! : ' '));
   }
 }
 
@@ -117,7 +118,7 @@ class _CardImage extends StatelessWidget {
                 ? FadeInImage(
                     placeholder: AssetImage(
                         'assets/images/${isDarkMode ? 'dark' : 'light'}/giphy.gif'),
-                    image: NetworkImage(newss.urlToImage),
+                    image: NetworkImage(newss.urlToImage!),
                   )
                 : Image(
                     image: AssetImage(
