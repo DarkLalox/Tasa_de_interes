@@ -122,7 +122,7 @@ class _CardImage extends StatelessWidget {
                   )
                 : Image(
                     image: AssetImage(
-                        'assets/images/${isDarkMode ? 'dark' : 'light'}/no-image.png.gif'),
+                        'assets/images/${isDarkMode ? 'dark' : 'light'}/no-image.png'),
                   )),
       ),
     );
