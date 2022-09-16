@@ -20,7 +20,6 @@ class InterestService extends SimpleNotifier {
         '$_URL_BANCO_CENTRAL?user=$_User&pass=$_PASS&firstdate=2022-09-08&lastdate=2022-09-08&timeseries=$_TIMESERIES';
     final res = await http.get(Uri.parse(url));
     final interesResponse = interestResponseFromJson(res.body);
-
     this.interesrate.addAll(interesResponse.series.obs);
     notify();
   }
