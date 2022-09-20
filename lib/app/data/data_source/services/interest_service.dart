@@ -11,13 +11,13 @@ final _TIMESERIES = 'F022.TPM.TIN.D001.NO.Z.D';
 
 class InterestService extends SimpleNotifier {
   List<Ob> interesrate = [];
-  InterestService() {
-    this.getInterest();
+  InterestService(date) {
+    this.getInterest(date);
   }
 
-  getInterest() async {
+  getInterest(date) async {
     final url =
-        '$_URL_BANCO_CENTRAL?user=$_User&pass=$_PASS&firstdate=2022-09-08&lastdate=2022-09-08&timeseries=$_TIMESERIES';
+        '$_URL_BANCO_CENTRAL?user=$_User&pass=$_PASS&firstdate=$date&lastdate=$date&timeseries=$_TIMESERIES';
     final res = await http.get(Uri.parse(url));
     final interesResponse = interestResponseFromJson(res.body);
     this.interesrate.addAll(interesResponse.series.obs);
