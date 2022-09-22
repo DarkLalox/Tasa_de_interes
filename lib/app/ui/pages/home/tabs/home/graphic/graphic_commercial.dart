@@ -72,6 +72,7 @@ class __DateCommercialState extends State<_DateCommercial> {
             double.parse(item['value'])),
       );
     }
+    if (!mounted) return;
     setState(() {
       loading = false;
     });

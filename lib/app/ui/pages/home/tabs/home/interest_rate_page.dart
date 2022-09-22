@@ -82,6 +82,7 @@ class _DateState extends State<_Date> {
                     if (result != null) {
                       String formattedDate =
                           DateFormat('yyyy-MM-dd').format(result);
+                      if (!mounted) return;
                       setState(() {
                         _date = formattedDate;
                       });
@@ -90,11 +91,13 @@ class _DateState extends State<_Date> {
                       final res = await http.get(Uri.parse(url));
                       final jsondata = jsonDecode(res.body);
                       if (!jsondata["Series"]["Obs"].isEmpty) {
+                        if (!mounted) return;
                         setState(() {
                           _tasa = jsondata["Series"]["Obs"][0]["value"];
                           loading == false;
                         });
                       } else {
+                        if (!mounted) return;
                         setState(() {
                           _tasa = "No hay datos";
                           loading = false;
