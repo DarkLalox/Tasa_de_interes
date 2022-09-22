@@ -1,5 +1,5 @@
 // ignore_for_file: prefer_const_constructors
-/*
+
 import 'package:charts_flutter/flutter.dart' as charts;
 import 'package:flutter/material.dart';
 
@@ -10,9 +10,9 @@ class SimpleTimeSeriesChart extends StatelessWidget {
   // ignore: prefer_const_constructors_in_immutables, use_key_in_widget_constructors
   SimpleTimeSeriesChart(this.seriesList, {required this.animate});
 
-  factory SimpleTimeSeriesChart.withSampleData() {
+  factory SimpleTimeSeriesChart.withSampleData(data) {
     return SimpleTimeSeriesChart(
-      _createSampleData(),
+      _createSampleData(data),
       animate: false,
     );
   }
@@ -25,21 +25,15 @@ class SimpleTimeSeriesChart extends StatelessWidget {
       dateTimeFactory: const charts.LocalDateTimeFactory(),
       primaryMeasureAxis: charts.NumericAxisSpec(
         tickProviderSpec: charts.BasicNumericTickProviderSpec(
-          desiredTickCount: 11,
+          desiredTickCount: 7,
         ),
       ),
     );
   }
 
   /// Create one series with sample hard coded data.
-  static List<charts.Series<TimeSeriesSales, DateTime>> _createSampleData() {
-    final data = [
-      TimeSeriesSales(DateTime(2022, 1, 1), 4.21),
-      TimeSeriesSales(DateTime(2022, 2, 1), 5.50),
-      TimeSeriesSales(DateTime(2022, 3, 1), 5.63),
-      TimeSeriesSales(DateTime(2022, 4, 1), 7.00),
-    ];
-
+  static List<charts.Series<TimeSeriesSales, DateTime>> _createSampleData(
+      data) {
     return [
       charts.Series<TimeSeriesSales, DateTime>(
         id: 'Tasa de interés',
@@ -58,4 +52,4 @@ class TimeSeriesSales {
   final double value;
 
   TimeSeriesSales(this.time, this.value);
-}*/
+}

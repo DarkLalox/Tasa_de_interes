@@ -19,7 +19,7 @@ class InterestRate extends StatelessWidget {
         body: Center(
           child: Column(
             children: [
-              const SizedBox(height: 120),
+              const SizedBox(height: 65),
               Container(
                 width: 300,
                 height: 300,
@@ -52,86 +52,88 @@ class _DateState extends State<_Date> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          children: [
-            const Text('Calculador TPM',
-                style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                  fontSize: 28,
-                )),
-            const SizedBox(height: 40),
-            SizedBox(
-              width: 234,
-              height: 55,
-              child: ElevatedButton.icon(
-                style: ButtonStyle(
-                  shape: MaterialStateProperty.all(
-                    RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(20)),
+        child: SingleChildScrollView(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+              const Text('Calculador TPM',
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 28,
+                  )),
+              const SizedBox(height: 40),
+              SizedBox(
+                width: 234,
+                height: 55,
+                child: ElevatedButton.icon(
+                  style: ButtonStyle(
+                    shape: MaterialStateProperty.all(
+                      RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(20)),
+                    ),
+                  ),
+                  onPressed: () async {
+                    final result = await showDatePicker(
+                      context: context,
+                      initialDate: DateTime.now(),
+                      firstDate: DateTime(1997),
+                      lastDate: DateTime.now(),
+                    );
+                    if (result != null) {
+                      String formattedDate =
+                          DateFormat('yyyy-MM-dd').format(result);
+                      setState(() {
+                        _date = formattedDate;
+                      });
+                      final url =
+                          '$_URL_BANCO_CENTRAL?user=$_User&pass=$_PASS&firstdate=$formattedDate&lastdate=$formattedDate&timeseries=$_TIMESERIES';
+                      final res = await http.get(Uri.parse(url));
+                      final jsondata = jsonDecode(res.body);
+                      if (!jsondata["Series"]["Obs"].isEmpty) {
+                        setState(() {
+                          _tasa = jsondata["Series"]["Obs"][0]["value"];
+                          loading == false;
+                        });
+                      } else {
+                        setState(() {
+                          _tasa = "No hay datos";
+                          loading = false;
+                        });
+                      }
+                    }
+                  },
+                  icon: const Icon(Icons.calendar_today),
+                  label: const Text(
+                    "Elige una fecha",
+                    style: TextStyle(fontSize: 25),
                   ),
                 ),
-                onPressed: () async {
-                  final result = await showDatePicker(
-                    context: context,
-                    initialDate: DateTime.now(),
-                    firstDate: DateTime(1997),
-                    lastDate: DateTime.now(),
-                  );
-                  if (result != null) {
-                    String formattedDate =
-                        DateFormat('yyyy-MM-dd').format(result);
-                    setState(() {
-                      _date = formattedDate;
-                    });
-                    final url =
-                        '$_URL_BANCO_CENTRAL?user=$_User&pass=$_PASS&firstdate=$formattedDate&lastdate=$formattedDate&timeseries=$_TIMESERIES';
-                    final res = await http.get(Uri.parse(url));
-                    final jsondata = jsonDecode(res.body);
-                    if (!jsondata["Series"]["Obs"].isEmpty) {
-                      setState(() {
-                        _tasa = jsondata["Series"]["Obs"][0]["value"];
-                        loading == false;
-                      });
-                    } else {
-                      setState(() {
-                        _tasa = "No hay datos";
-                        loading = false;
-                      });
-                    }
-                  }
-                },
-                icon: const Icon(Icons.calendar_today),
-                label: const Text(
-                  "Elige una fecha",
-                  style: TextStyle(fontSize: 25),
-                ),
               ),
-            ),
-            Column(
-              children: [
-                const SizedBox(height: 60),
-                (_date == '???')
-                    ? const Text(" ")
-                    : Text(
-                        'El día ${DateFormat('dd-MM-yyyy').format(DateTime.parse(_date))}',
-                        style: const TextStyle(
-                          fontWeight: FontWeight.bold,
-                          fontSize: 16,
-                        )),
-                const SizedBox(height: 30),
-                (loading == true && (_date != '???' && _tasa == '???'))
-                    ? const CircularProgressIndicator()
-                    : (_tasa == '???')
-                        ? const Text(" ")
-                        : Text('La Tasa de interés es : $_tasa %',
-                            style: const TextStyle(
-                              fontWeight: FontWeight.bold,
-                              fontSize: 16,
-                            )),
-              ],
-            )
-          ],
+              Column(
+                children: [
+                  const SizedBox(height: 60),
+                  (_date == '???')
+                      ? const Text(" ")
+                      : Text(
+                          'El día ${DateFormat('dd-MM-yyyy').format(DateTime.parse(_date))}',
+                          style: const TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 16,
+                          )),
+                  const SizedBox(height: 30),
+                  (loading == true && (_date != '???' && _tasa == '???'))
+                      ? const CircularProgressIndicator()
+                      : (_tasa == '???')
+                          ? const Text(" ")
+                          : Text('La Tasa de interés es : $_tasa %',
+                              style: const TextStyle(
+                                fontWeight: FontWeight.bold,
+                                fontSize: 16,
+                              )),
+                ],
+              )
+            ],
+          ),
         ),
       ),
     );
