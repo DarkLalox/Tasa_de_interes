@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_meedu/meedu.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:tesis_1/app/domain/models/interest_models.dart';
 import 'package:tesis_1/app/domain/repositories/preferences_repository.dart';
+import 'package:tesis_1/app/tmp_graphic.dart';
 
 class ThemeController extends SimpleNotifier {
   late ThemeMode _mode;

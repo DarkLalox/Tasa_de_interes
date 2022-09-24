@@ -7,28 +7,21 @@ import 'package:flutter_meedu/ui.dart';
 import 'dart:math';
 import 'package:intl/intl.dart';
 
-class SimpleTimeSeriesChart extends StatelessWidget {
+class SimpleTimeSeriesChart1 extends StatelessWidget {
   final List<charts.Series<dynamic, DateTime>> seriesList;
   final bool animate;
 
   // ignore: prefer_const_constructors_in_immutables, use_key_in_widget_constructors
-  SimpleTimeSeriesChart(this.seriesList, {required this.animate});
+  SimpleTimeSeriesChart1(this.seriesList, {required this.animate});
 
-  factory SimpleTimeSeriesChart.withSampleData(data) {
-    return SimpleTimeSeriesChart(
+  factory SimpleTimeSeriesChart1.withSampleData(data) {
+    return SimpleTimeSeriesChart1(
       _createSampleData(data),
       animate: false,
     );
   }
   static String? pointerAmount;
   static String? pointerDay;
-  var axis = charts.NumericAxisSpec(
-      renderSpec: charts.GridlineRendererSpec(
-    labelStyle: charts.TextStyleSpec(
-        fontSize: 10,
-        color: charts.MaterialPalette
-            .white), //chnage white color as per your requirement.
-  ));
 
   @override
   Widget build(BuildContext context) {
@@ -52,33 +45,23 @@ class SimpleTimeSeriesChart extends StatelessWidget {
       ],
       animate: animate,
       dateTimeFactory: const charts.LocalDateTimeFactory(),
-      domainAxis: charts.DateTimeAxisSpec(
-          renderSpec: charts.GridlineRendererSpec(
-              lineStyle: charts.LineStyleSpec(
-                  color: charts.MaterialPalette.transparent),
-              labelStyle:
-                  charts.TextStyleSpec(color: charts.MaterialPalette.white))),
       primaryMeasureAxis: charts.NumericAxisSpec(
-          tickProviderSpec: charts.BasicNumericTickProviderSpec(
-            desiredTickCount: 7,
-          ),
-          renderSpec: charts.GridlineRendererSpec(
-              labelStyle:
-                  charts.TextStyleSpec(color: charts.MaterialPalette.white),
-              lineStyle: charts.LineStyleSpec(
-                  color: charts.MaterialPalette.gray.shade800))),
+        tickProviderSpec: charts.BasicNumericTickProviderSpec(
+          desiredTickCount: 7,
+        ),
+      ),
     );
   }
 
   /// Create one series with sample hard coded data.
-  static List<charts.Series<TimeSeriesSales, DateTime>> _createSampleData(
+  static List<charts.Series<TimeSeriesSales1, DateTime>> _createSampleData(
       data) {
     return [
-      charts.Series<TimeSeriesSales, DateTime>(
+      charts.Series<TimeSeriesSales1, DateTime>(
         id: 'Tasa de interés',
-        colorFn: (_, __) => charts.MaterialPalette.red.shadeDefault,
-        domainFn: (TimeSeriesSales value, _) => value.time,
-        measureFn: (TimeSeriesSales value, _) => value.value,
+        colorFn: (_, __) => charts.MaterialPalette.blue.shadeDefault,
+        domainFn: (TimeSeriesSales1 value, _) => value.time,
+        measureFn: (TimeSeriesSales1 value, _) => value.value,
         data: data,
       )
     ];
@@ -110,17 +93,17 @@ class MySymbolRenderer extends charts.CircleSymbolRenderer {
         bounds.width + 80,
         bounds.height + 22,
       ),
-      fill: charts.ColorUtil.fromDartColor(Color(0xff1b1b1b)),
-      stroke: charts.ColorUtil.fromDartColor(Colors.red),
+      fill: charts.ColorUtil.fromDartColor(Colors.white),
+      stroke: charts.ColorUtil.fromDartColor(Colors.blue),
       strokeWidthPx: 2,
     );
 
     var myStyle = styles.TextStyle();
     myStyle.fontSize = 9;
-    myStyle.color = charts.ColorUtil.fromDartColor(Colors.grey.shade300);
+    myStyle.color = charts.ColorUtil.fromDartColor(Colors.black);
     canvas.drawText(
       elements.TextElement(
-          'Fecha: ${DateFormat('dd-MM-yyyy').format(DateTime.parse(SimpleTimeSeriesChart.pointerDay!))} \nValor: ${SimpleTimeSeriesChart.pointerAmount} %',
+          'Fecha: ${DateFormat('dd-MM-yyyy').format(DateTime.parse(SimpleTimeSeriesChart1.pointerDay!))} \nValor: ${SimpleTimeSeriesChart1.pointerAmount}',
           style: myStyle),
       (bounds.left - 35).round(),
       (bounds.top - 24).round(),
@@ -129,9 +112,9 @@ class MySymbolRenderer extends charts.CircleSymbolRenderer {
 }
 
 /// Sample time series data type.
-class TimeSeriesSales {
+class TimeSeriesSales1 {
   final DateTime time;
   final double value;
 
-  TimeSeriesSales(this.time, this.value);
+  TimeSeriesSales1(this.time, this.value);
 }
