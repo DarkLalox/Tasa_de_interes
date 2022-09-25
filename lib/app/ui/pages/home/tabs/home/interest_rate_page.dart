@@ -16,16 +16,19 @@ class InterestRate extends StatelessWidget {
         appBar: AppBar(
           title: const Text("Tasa de interés"),
         ),
-        body: Center(
-          child: Column(
-            children: [
-              const SizedBox(height: 65),
-              Container(
-                width: 300,
-                height: 300,
-                child: const _Date(),
-              ),
-            ],
+        body: SingleChildScrollView(
+          child: Center(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                const SizedBox(height: 65),
+                Container(
+                  width: 300,
+                  height: 300,
+                  child: const _Date(),
+                ),
+              ],
+            ),
           ),
         ));
   }

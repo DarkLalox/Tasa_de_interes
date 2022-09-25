@@ -9,12 +9,17 @@ import 'package:tesis_1/app/ui/pages/home/tabs/home/language_page.dart';
 import 'package:tesis_1/app/ui/pages/home/tabs/home/news/news_page.dart';
 import 'package:tesis_1/app/ui/routes/routes.dart';
 
-class HomeTab extends StatelessWidget {
+class HomeTab extends ConsumerWidget {
   const HomeTab({Key? key}) : super(key: key);
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, ref) {
     final isDark = context.isDarkMode;
+    final sessionController = ref.watch(sessionProvider);
+    final user = sessionController.user!;
+    final displayName = user.displayName ?? '';
+    final letter = displayName.isNotEmpty ? displayName[0] : "";
+    List<String> splilName = user.displayName!.split(" ");
     return Scaffold(
       appBar: AppBar(),
       drawer: const NavigationDrawer(),
@@ -24,7 +29,11 @@ class HomeTab extends StatelessWidget {
           children: [
             const SizedBox(height: 40),
             Container(
-              child: const Text("Hola", style: TextStyle(fontSize: 25)),
+              child: Text("Hola, ${splilName.first}",
+                  style: TextStyle(
+                    fontSize: 25,
+                    fontWeight: FontWeight.bold,
+                  )),
             ),
             const SizedBox(height: 70),
             AspectRatio(
@@ -35,7 +44,11 @@ class HomeTab extends StatelessWidget {
             ),
             const SizedBox(height: 30),
             const Text(
-              "Aplicación con información util",
+              "Aplicación móvil con información útil de las tasas de interés recopiladas ",
+              style: TextStyle(fontSize: 10),
+            ),
+            const Text(
+              "del Banco Central de Chile y noticias recopiladas de NewApi ",
               style: TextStyle(fontSize: 10),
             ),
           ],
@@ -48,7 +61,6 @@ class HomeTab extends StatelessWidget {
 class NavigationDrawer extends ConsumerWidget {
   const NavigationDrawer({Key? key}) : super(key: key);
 
-  @override
   Widget build(BuildContext context, ref) {
     return Drawer(
       child: SingleChildScrollView(

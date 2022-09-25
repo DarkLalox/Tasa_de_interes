@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_meedu/meedu.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:tesis_1/app/domain/models/interest_models.dart';
@@ -71,9 +72,11 @@ class ThemeController extends SimpleNotifier {
     if (_mode == ThemeMode.light) {
       _mode = ThemeMode.dark;
       _preferences.darkMode(true);
+      SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle.light);
     } else {
       _mode = ThemeMode.light;
       _preferences.darkMode(false);
+      SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle.dark);
     }
     notify();
   }
