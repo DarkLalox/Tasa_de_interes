@@ -1,7 +1,6 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_meedu/ui.dart';
-import 'package:tesis_1/app/tmp_graphic.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:tesis_1/app/ui/global_controllers/session_controller.dart';
 import 'package:tesis_1/app/ui/pages/home/home_page.dart';
 import 'package:tesis_1/app/ui/pages/home/tabs/home/graphic_page.dart';
@@ -15,9 +14,33 @@ class HomeTab extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final isDark = context.isDarkMode;
     return Scaffold(
       appBar: AppBar(),
       drawer: const NavigationDrawer(),
+      body: SingleChildScrollView(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: [
+            const SizedBox(height: 40),
+            Container(
+              child: const Text("Hola", style: TextStyle(fontSize: 25)),
+            ),
+            const SizedBox(height: 70),
+            AspectRatio(
+              aspectRatio: 16 / 9,
+              child: SvgPicture.asset(
+                'assets/images/${isDark ? 'dark' : 'light'}/Home.svg',
+              ),
+            ),
+            const SizedBox(height: 30),
+            const Text(
+              "Aplicación con información util",
+              style: TextStyle(fontSize: 10),
+            ),
+          ],
+        ),
+      ),
     );
   }
 }
@@ -81,43 +104,43 @@ class NavigationDrawer extends ConsumerWidget {
       child: Column(
         children: [
           ListTile(
-              title: Text('Inicio'),
-              leading: Icon(Icons.home),
+              title: const Text('Inicio'),
+              leading: const Icon(Icons.home),
               onTap: () {
-                router.push(HomePage());
+                router.push(const HomePage());
               }),
           ListTile(
-            title: Text('Tasa de interés'),
-            leading: Icon(Icons.graphic_eq_rounded),
+            title: const Text('Tasa de interés'),
+            leading: const Icon(Icons.graphic_eq_rounded),
             onTap: () {
-              router.push(InterestRate());
+              router.push(const InterestRate());
             },
           ),
           ListTile(
-            title: Text('Gráficos'),
-            leading: Icon(Icons.bar_chart),
+            title: const Text('Gráficos'),
+            leading: const Icon(Icons.bar_chart),
             onTap: () {
-              router.push(Graphic());
+              router.push(const Graphic());
             },
           ),
           ListTile(
-            title: Text('Noticias'),
-            leading: Icon(Icons.auto_stories_outlined),
+            title: const Text('Noticias'),
+            leading: const Icon(Icons.auto_stories_outlined),
             onTap: () {
-              router.push(News());
+              router.push(const News());
             },
           ),
           Divider(color: isDark ? Colors.white : Colors.black54),
           ListTile(
-            title: Text('Idioma'),
-            leading: Icon(Icons.language),
+            title: const Text('Idioma'),
+            leading: const Icon(Icons.language),
             onTap: () {
-              router.push(Language());
+              router.push(const Language());
             },
           ),
           ListTile(
-            title: Text('Cerrar Sesión'),
-            leading: Icon(Icons.exit_to_app),
+            title: const Text('Cerrar Sesión'),
+            leading: const Icon(Icons.exit_to_app),
             onTap: () async {
               await sessionProvider.read.signOut();
               router.pushNamedAndRemoveUntil(Routes.LOGIN);
