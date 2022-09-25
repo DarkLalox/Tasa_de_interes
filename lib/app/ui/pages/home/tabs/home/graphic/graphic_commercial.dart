@@ -14,7 +14,7 @@ class Graphic_Comerciales extends StatelessWidget {
     final isDark = context.isDarkMode;
     return Scaffold(
         appBar: AppBar(
-          title: const Text('Comerciales (TIP)'),
+          title: const Text('Comerciales'),
         ),
         body: Center(
           child: SingleChildScrollView(
@@ -94,7 +94,7 @@ class __DateCommercialState extends State<_DateCommercial> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
-            const Text("Gráfico comercial (TIP)",
+            const Text("Gráfico Comercial",
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
                   fontSize: 20,
@@ -252,7 +252,7 @@ class __DateCommercialState1 extends State<_DateCommercial1> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
-            const Text("Gráfico comercial (TIP)",
+            const Text("Gráfico Comercial",
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
                   fontSize: 20,

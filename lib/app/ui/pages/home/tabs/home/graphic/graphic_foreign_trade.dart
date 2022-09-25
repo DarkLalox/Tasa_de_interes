@@ -14,7 +14,7 @@ class Graphic_Comercio_Exterior extends StatelessWidget {
     final isDark = context.isDarkMode;
     return Scaffold(
         appBar: AppBar(
-          title: const Text('Comercio exterior (TIP)'),
+          title: const Text('Comercio exterior'),
         ),
         body: Center(
           child: SingleChildScrollView(
@@ -252,7 +252,7 @@ class __DateComercio_ExteriorState1 extends State<_DateComercio_Exterior1> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
-            const Text("Gráfico TPM",
+            const Text("Gráfico Comercio Exterior",
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
                   fontSize: 20,

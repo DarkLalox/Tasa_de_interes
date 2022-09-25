@@ -14,7 +14,7 @@ class Graphic_Consumo extends StatelessWidget {
     final isDark = context.isDarkMode;
     return Scaffold(
         appBar: AppBar(
-          title: const Text('Consumo (TIP)'),
+          title: const Text('Consumo'),
         ),
         body: Center(
           child: SingleChildScrollView(

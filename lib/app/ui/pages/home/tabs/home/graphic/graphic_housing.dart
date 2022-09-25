@@ -14,7 +14,7 @@ class Graphic_Housing extends StatelessWidget {
     final isDark = context.isDarkMode;
     return Scaffold(
         appBar: AppBar(
-          title: const Text('Vivienda (TIP)'),
+          title: const Text('Vivienda'),
         ),
         body: Center(
           child: SingleChildScrollView(
@@ -92,7 +92,7 @@ class __DateHousingState extends State<_DateHousing> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
-            const Text("Gráfico TPM",
+            const Text("Gráfico Vivienda",
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
                   fontSize: 20,
@@ -249,7 +249,7 @@ class __DateHousingState1 extends State<_DateHousing1> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
-            const Text("Gráfico TPM",
+            const Text("Gráfico Vivienda",
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
                   fontSize: 20,

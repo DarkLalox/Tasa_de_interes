@@ -103,7 +103,7 @@ class MySymbolRenderer extends charts.CircleSymbolRenderer {
     myStyle.color = charts.ColorUtil.fromDartColor(Colors.black);
     canvas.drawText(
       elements.TextElement(
-          'Fecha: ${DateFormat('dd-MM-yyyy').format(DateTime.parse(SimpleTimeSeriesChart1.pointerDay!))} \nValor: ${SimpleTimeSeriesChart1.pointerAmount}',
+          'Fecha: ${DateFormat('dd-MM-yyyy').format(DateTime.parse(SimpleTimeSeriesChart1.pointerDay!))} \nValor: ${SimpleTimeSeriesChart1.pointerAmount} %',
           style: myStyle),
       (bounds.left - 35).round(),
       (bounds.top - 24).round(),
