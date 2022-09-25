@@ -49,6 +49,86 @@ class S {
   static S? maybeOf(BuildContext context) {
     return Localizations.of<S>(context, S);
   }
+
+  /// `Sign in`
+  String get simpleText {
+    return Intl.message(
+      'Sign in',
+      name: 'simpleText',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Fogot password?`
+  String get simpleText2 {
+    return Intl.message(
+      'Fogot password?',
+      name: 'simpleText2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Don't have an account?`
+  String get simpleText3 {
+    return Intl.message(
+      'Don\'t have an account?',
+      name: 'simpleText3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Sign up`
+  String get simpleText4 {
+    return Intl.message(
+      'Sign up',
+      name: 'simpleText4',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Email`
+  String get simpleText5 {
+    return Intl.message(
+      'Email',
+      name: 'simpleText5',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Invalid email`
+  String get simpleText6 {
+    return Intl.message(
+      'Invalid email',
+      name: 'simpleText6',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Invalid password`
+  String get simpleText7 {
+    return Intl.message(
+      'Invalid password',
+      name: 'simpleText7',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Password`
+  String get simpleText8 {
+    return Intl.message(
+      'Password',
+      name: 'simpleText8',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
@@ -57,6 +137,7 @@ class AppLocalizationDelegate extends LocalizationsDelegate<S> {
   List<Locale> get supportedLocales {
     return const <Locale>[
       Locale.fromSubtags(languageCode: 'en'),
+      Locale.fromSubtags(languageCode: 'es'),
     ];
   }
 

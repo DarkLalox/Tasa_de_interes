@@ -1,5 +1,5 @@
 // DO NOT EDIT. This is code generated via package:intl/generate_localized.dart
-// This is a library that provides messages for a en locale. All the
+// This is a library that provides messages for a es locale. All the
 // messages from the main program should be duplicated here with the same
 // function name.
 
@@ -18,18 +18,22 @@ final messages = new MessageLookup();
 typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 
 class MessageLookup extends MessageLookupByLibrary {
-  String get localeName => 'en';
+  String get localeName => 'es';
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
-        "simpleText": MessageLookupByLibrary.simpleMessage("Sign in"),
-        "simpleText2": MessageLookupByLibrary.simpleMessage("Fogot password?"),
+        "simpleText": MessageLookupByLibrary.simpleMessage("Iniciar sesión"),
+        "simpleText2":
+            MessageLookupByLibrary.simpleMessage("¿Olvidaste tu contraseña?"),
         "simpleText3":
-            MessageLookupByLibrary.simpleMessage("Don\'t have an account?"),
-        "simpleText4": MessageLookupByLibrary.simpleMessage("Sign up"),
-        "simpleText5": MessageLookupByLibrary.simpleMessage("Email"),
-        "simpleText6": MessageLookupByLibrary.simpleMessage("Invalid email"),
-        "simpleText7": MessageLookupByLibrary.simpleMessage("Invalid password"),
-        "simpleText8": MessageLookupByLibrary.simpleMessage("Password")
+            MessageLookupByLibrary.simpleMessage("¿No tienes una cuenta?"),
+        "simpleText4": MessageLookupByLibrary.simpleMessage("Registrar"),
+        "simpleText5":
+            MessageLookupByLibrary.simpleMessage("Correo electrónico"),
+        "simpleText6": MessageLookupByLibrary.simpleMessage(
+            "El Correo electrónico es inválido"),
+        "simpleText7":
+            MessageLookupByLibrary.simpleMessage("La contraseña es inválida"),
+        "simpleText8": MessageLookupByLibrary.simpleMessage("Contraseña")
       };
 }

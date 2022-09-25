@@ -95,3 +95,5 @@ flutter:
   # see https://flutter.dev/custom-fonts/#from-packages
 flutter_intl:
   enabled: true
+  main_locale: en
+  class_name: S

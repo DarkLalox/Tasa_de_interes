@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_meedu/ui.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:tesis_1/app/ui/pages/login/login_page.dart';
-
+import 'package:tesis_1/generated/l10n.dart';
 import '../../../../utils/email_validator.dart';
 import '../../../global_widgets/custom_input_field.dart';
 import '../../../global_widgets/rounded_button.dart';
@@ -50,26 +50,26 @@ class LoginForm extends StatelessWidget {
                         ),
                         const SizedBox(height: 20),
                         CustomInputField(
-                          label: "Correo electrónico",
+                          label: S.of(context).simpleText5,
                           onChanged: _controller.onEmailChanged,
                           inputType: TextInputType.emailAddress,
                           validator: (text) {
                             if (isValidEmail(text!)) {
                               return null;
                             }
-                            return "El Correo electrónico es inválido";
+                            return S.of(context).simpleText6;
                           },
                         ),
                         const SizedBox(height: 20),
                         CustomInputField(
-                          label: "Contraseña",
+                          label: S.of(context).simpleText8,
                           onChanged: _controller.onPasswordChanged,
                           isPassword: true,
                           validator: (text) {
                             if (text!.trim().length >= 6) {
                               return null;
                             }
-                            return "La contraseña es inválida";
+                            return S.of(context).simpleText7;
                           },
                         ),
                         const SizedBox(height: 22),
@@ -77,7 +77,7 @@ class LoginForm extends StatelessWidget {
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             RoundedButton(
-                              text: "Iniciar sesión",
+                              text: S.of(context).simpleText,
                               onPressed: () => sendLoginForm(context),
                             ),
                           ],
@@ -85,20 +85,20 @@ class LoginForm extends StatelessWidget {
                         TextButton(
                           onPressed: () =>
                               router.pushNamed(Routes.RESET_PASSWORD),
-                          child: const Text(
-                            "¿Olvidaste tu contraseña?",
+                          child: Text(
+                            S.of(context).simpleText2,
                           ),
                         ),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            const Text("¿No tienes una cuenta?"),
+                            Text(S.of(context).simpleText3),
                             TextButton(
                               onPressed: () => router.pushNamed(
                                 Routes.REGISTER,
                               ),
-                              child: const Text(
-                                "Registrar",
+                              child: Text(
+                                S.of(context).simpleText4,
                                 style: TextStyle(fontWeight: FontWeight.bold),
                               ),
                             ),

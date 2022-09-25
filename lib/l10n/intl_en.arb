@@ -1,1 +1,10 @@
-{}
+{
+    "simpleText":"Sign in",
+    "simpleText2":"Fogot password?",
+    "simpleText3":"Don't have an account?",
+    "simpleText4":"Sign up",
+    "simpleText5":"Email",
+    "simpleText6":"Invalid email",
+    "simpleText7":"Invalid password",
+    "simpleText8":"Password"
+}
