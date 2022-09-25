@@ -92,7 +92,7 @@ class LoginForm extends StatelessWidget {
                         Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            const Text("No tienes un cuenta?"),
+                            const Text("¿No tienes una cuenta?"),
                             TextButton(
                               onPressed: () => router.pushNamed(
                                 Routes.REGISTER,

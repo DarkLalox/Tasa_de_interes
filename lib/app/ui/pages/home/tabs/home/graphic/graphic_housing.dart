@@ -104,18 +104,20 @@ class __DateHousingState extends State<_DateHousing> {
                 Container(
                   width: 150,
                   height: 40,
-                  child: ElevatedButton(
+                  child: ElevatedButton.icon(
                     onPressed: pickDateRange,
-                    child: Text('${start.day}-${start.month}-${start.year}'),
+                    label: Text('${start.day}-${start.month}-${start.year}'),
+                    icon: const Icon(Icons.calendar_today),
                   ),
                 ),
                 const SizedBox(width: 30),
                 Container(
                   width: 150,
                   height: 40,
-                  child: ElevatedButton(
+                  child: ElevatedButton.icon(
                     onPressed: pickDateRange,
-                    child: Text('${end.day}-${end.month}-${end.year}'),
+                    label: Text('${end.day}-${end.month}-${end.year}'),
+                    icon: const Icon(Icons.calendar_today),
                   ),
                 ),
               ],
@@ -261,18 +263,20 @@ class __DateHousingState1 extends State<_DateHousing1> {
                 Container(
                   width: 150,
                   height: 40,
-                  child: ElevatedButton(
+                  child: ElevatedButton.icon(
                     onPressed: pickDateRange,
-                    child: Text('${start.day}-${start.month}-${start.year}'),
+                    label: Text('${start.day}-${start.month}-${start.year}'),
+                    icon: const Icon(Icons.calendar_today),
                   ),
                 ),
                 const SizedBox(width: 30),
                 Container(
                   width: 150,
                   height: 40,
-                  child: ElevatedButton(
+                  child: ElevatedButton.icon(
                     onPressed: pickDateRange,
-                    child: Text('${end.day}-${end.month}-${end.year}'),
+                    label: Text('${end.day}-${end.month}-${end.year}'),
+                    icon: const Icon(Icons.calendar_today),
                   ),
                 ),
               ],
