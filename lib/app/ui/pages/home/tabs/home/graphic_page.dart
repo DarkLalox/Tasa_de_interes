@@ -49,7 +49,7 @@ class ListTileGraphic extends StatelessWidget {
           ),
           Divider(color: isDark ? Colors.white : Colors.black54),
           ListTile(
-            title: Text('Consumo (TIP)'),
+            title: Text('Consumo'),
             leading: Icon(Icons.trending_up),
             onTap: () {
               router.push(Graphic_Consumo());
@@ -57,7 +57,7 @@ class ListTileGraphic extends StatelessWidget {
           ),
           Divider(color: isDark ? Colors.white : Colors.black54),
           ListTile(
-            title: Text('Vivienda (TIP)'),
+            title: Text('Vivienda'),
             leading: Icon(Icons.trending_up),
             onTap: () {
               router.push(Graphic_Housing());
@@ -65,7 +65,7 @@ class ListTileGraphic extends StatelessWidget {
           ),
           Divider(color: isDark ? Colors.white : Colors.black54),
           ListTile(
-            title: Text('Comercio exterior (TIP)'),
+            title: Text('Comercio exterior'),
             leading: Icon(Icons.trending_up),
             onTap: () {
               router.push(Graphic_Comercio_Exterior());
@@ -73,7 +73,7 @@ class ListTileGraphic extends StatelessWidget {
           ),
           Divider(color: isDark ? Colors.white : Colors.black54),
           ListTile(
-            title: Text('Comerciales (TIP)'),
+            title: Text('Comerciales'),
             leading: Icon(Icons.trending_up),
             onTap: () {
               router.push(Graphic_Comerciales());
