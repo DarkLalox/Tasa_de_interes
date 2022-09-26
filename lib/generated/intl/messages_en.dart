@@ -26,6 +26,8 @@ class MessageLookup extends MessageLookupByLibrary {
 
   static String m2(interest) => "The interest rate is : ${interest} %";
 
+  static String m3(date, value) => "Date: ${date} \nValue: ${value} %";
+
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "simpleText": MessageLookupByLibrary.simpleMessage("Sign in"),
@@ -105,6 +107,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Network request failed"),
         "textWithPlaceholder": m0,
         "textWithPlaceholder2": m1,
-        "textWithPlaceholder3": m2
+        "textWithPlaceholder3": m2,
+        "textWithPlaceholders": m3
       };
 }

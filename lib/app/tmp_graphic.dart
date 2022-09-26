@@ -6,6 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_meedu/ui.dart';
 import 'dart:math';
 import 'package:intl/intl.dart';
+import 'package:tesis_1/generated/l10n.dart';
 
 class SimpleTimeSeriesChart extends StatelessWidget {
   final List<charts.Series<dynamic, DateTime>> seriesList;
@@ -32,6 +33,7 @@ class SimpleTimeSeriesChart extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final isDarkMode = context.isDarkMode;
     return charts.TimeSeriesChart(
       seriesList,
       selectionModels: [
@@ -48,7 +50,7 @@ class SimpleTimeSeriesChart extends StatelessWidget {
         })
       ],
       behaviors: [
-        charts.LinePointHighlighter(symbolRenderer: MySymbolRenderer())
+        charts.LinePointHighlighter(symbolRenderer: MySymbolRenderer(context))
       ],
       animate: animate,
       dateTimeFactory: const charts.LocalDateTimeFactory(),
@@ -86,6 +88,9 @@ class SimpleTimeSeriesChart extends StatelessWidget {
 }
 
 class MySymbolRenderer extends charts.CircleSymbolRenderer {
+  final BuildContext context;
+  MySymbolRenderer(this.context);
+
   @override
   void paint(charts.ChartCanvas canvas, Rectangle<num> bounds,
       {List<int>? dashPattern,
@@ -120,7 +125,10 @@ class MySymbolRenderer extends charts.CircleSymbolRenderer {
     myStyle.color = charts.ColorUtil.fromDartColor(Colors.grey.shade300);
     canvas.drawText(
       elements.TextElement(
-          'Fecha: ${DateFormat('dd-MM-yyyy').format(DateTime.parse(SimpleTimeSeriesChart.pointerDay!))} \nValor: ${SimpleTimeSeriesChart.pointerAmount} %',
+          S.of(context).textWithPlaceholders(
+              DateFormat('dd-MM-yyyy')
+                  .format(DateTime.parse(SimpleTimeSeriesChart.pointerDay!)),
+              SimpleTimeSeriesChart.pointerAmount!),
           style: myStyle),
       (bounds.left - 35).round(),
       (bounds.top - 24).round(),

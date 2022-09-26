@@ -689,6 +689,16 @@ class S {
       args: [],
     );
   }
+
+  /// `Date: {date} \nValue: {value} %`
+  String textWithPlaceholders(Object date, Object value) {
+    return Intl.message(
+      'Date: $date \nValue: $value %',
+      name: 'textWithPlaceholders',
+      desc: '',
+      args: [date, value],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

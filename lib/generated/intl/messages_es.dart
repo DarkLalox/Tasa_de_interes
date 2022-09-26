@@ -26,6 +26,8 @@ class MessageLookup extends MessageLookupByLibrary {
 
   static String m2(interest) => "La Tasa de interés es : ${interest} %";
 
+  static String m3(date, value) => "Fecha: ${date} \nValor: ${value} %";
+
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "simpleText": MessageLookupByLibrary.simpleMessage("Iniciar sesión"),
@@ -122,6 +124,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Solicitud de red fallida"),
         "textWithPlaceholder": m0,
         "textWithPlaceholder2": m1,
-        "textWithPlaceholder3": m2
+        "textWithPlaceholder3": m2,
+        "textWithPlaceholders": m3
       };
 }
