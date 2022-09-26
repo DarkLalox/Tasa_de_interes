@@ -92,8 +92,17 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Calculadora de TPM"),
         "simpleText47": MessageLookupByLibrary.simpleMessage("No hay datos"),
         "simpleText48": MessageLookupByLibrary.simpleMessage("Elige una fecha"),
+        "simpleText49": MessageLookupByLibrary.simpleMessage(
+            "Tasa de interés monetaria (TPM)"),
         "simpleText5":
             MessageLookupByLibrary.simpleMessage("Correo electrónico"),
+        "simpleText50": MessageLookupByLibrary.simpleMessage(
+            "Tasa de interés interbancaria (TIB)"),
+        "simpleText51": MessageLookupByLibrary.simpleMessage("Consumo"),
+        "simpleText52": MessageLookupByLibrary.simpleMessage("Vivienda"),
+        "simpleText53":
+            MessageLookupByLibrary.simpleMessage("Comercio exterior"),
+        "simpleText54": MessageLookupByLibrary.simpleMessage("Comerciales"),
         "simpleText6": MessageLookupByLibrary.simpleMessage(
             "El Correo electrónico es inválido"),
         "simpleText7":

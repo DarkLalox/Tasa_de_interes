@@ -49,6 +49,13 @@
     "simpleText47":"No data",
     "simpleText48":"Choose a date",
     "textWithPlaceholder2":"The day {day}",
-    "textWithPlaceholder3":"The interest rate is : {interest} %"
+    "textWithPlaceholder3":"The interest rate is : {interest} %",
+    "simpleText49":"Monerary policy rate (MPR)",
+    "simpleText50":"Interbank interest rate (IBR)",
+    "simpleText51":"Consumer",
+    "simpleText52":"Housing",
+    "simpleText53":"Foreign trade",
+    "simpleText54":"Commercial"
+
 
 }   

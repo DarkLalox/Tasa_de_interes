@@ -559,6 +559,66 @@ class S {
       args: [interest],
     );
   }
+
+  /// `Monerary policy rate (MPR)`
+  String get simpleText49 {
+    return Intl.message(
+      'Monerary policy rate (MPR)',
+      name: 'simpleText49',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Interbank interest rate (IBR)`
+  String get simpleText50 {
+    return Intl.message(
+      'Interbank interest rate (IBR)',
+      name: 'simpleText50',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Consumer`
+  String get simpleText51 {
+    return Intl.message(
+      'Consumer',
+      name: 'simpleText51',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Housing`
+  String get simpleText52 {
+    return Intl.message(
+      'Housing',
+      name: 'simpleText52',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Foreign trade`
+  String get simpleText53 {
+    return Intl.message(
+      'Foreign trade',
+      name: 'simpleText53',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Commercial`
+  String get simpleText54 {
+    return Intl.message(
+      'Commercial',
+      name: 'simpleText54',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

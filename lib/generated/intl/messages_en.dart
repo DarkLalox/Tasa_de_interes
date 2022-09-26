@@ -80,7 +80,15 @@ class MessageLookup extends MessageLookupByLibrary {
         "simpleText46": MessageLookupByLibrary.simpleMessage("MPR calculator"),
         "simpleText47": MessageLookupByLibrary.simpleMessage("No data"),
         "simpleText48": MessageLookupByLibrary.simpleMessage("Choose a date"),
+        "simpleText49":
+            MessageLookupByLibrary.simpleMessage("Monerary policy rate (MPR)"),
         "simpleText5": MessageLookupByLibrary.simpleMessage("Email"),
+        "simpleText50": MessageLookupByLibrary.simpleMessage(
+            "Interbank interest rate (IBR)"),
+        "simpleText51": MessageLookupByLibrary.simpleMessage("Consumer"),
+        "simpleText52": MessageLookupByLibrary.simpleMessage("Housing"),
+        "simpleText53": MessageLookupByLibrary.simpleMessage("Foreign trade"),
+        "simpleText54": MessageLookupByLibrary.simpleMessage("Commercial"),
         "simpleText6": MessageLookupByLibrary.simpleMessage("Invalid email"),
         "simpleText7": MessageLookupByLibrary.simpleMessage("Invalid password"),
         "simpleText8": MessageLookupByLibrary.simpleMessage("Password"),
