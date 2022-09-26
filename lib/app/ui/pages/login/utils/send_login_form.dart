@@ -19,7 +19,7 @@ Future<void> sendLoginForm(BuildContext context) async {
 
       switch (response.error) {
         case SignInError.networkRequestFailed:
-          errorMessage = S.of(context).simpleTex9;
+          errorMessage = S.of(context).simpleText9;
           break;
         case SignInError.userDisabled:
           errorMessage = S.of(context).simpleText10;
@@ -52,7 +52,7 @@ Future<void> sendLoginForm(BuildContext context) async {
     Dialogs.alert(
       context,
       title: "ERROR",
-      content: S.of(context).simpleTexct15,
+      content: S.of(context).simpleText15,
     );
   }
 }

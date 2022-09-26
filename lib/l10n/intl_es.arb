@@ -11,8 +11,16 @@
     "simpleText10":"Usuario Deshabilitado",
     "simpleText11":"Usuario no encontrado",
     "simpleText12":"Contraseña Equivocada",
-    "simpleTect13":"Demaciadas peticiones",
+    "simpleText13":"Demaciadas peticiones",
     "simpleText14":"Error desconocido",
-    "simpleText15":"Campos Inválidos"
+    "simpleText15":"Campos Inválidos",
+    "simpleText16":"Registrarse",
+    "simpleText17":"Nombre",
+    "simpleText18":"Nombre es inválido",
+    "simpleText19":"Nombre PYME",
+    "simpleText20":"Ingresar PYME",
+    "simpleText21":"Confirmar contraseña",
+    "simpleText22":"La contraseña de verificación no coincide",
+    "simpleText23":"Registro"
 
 }

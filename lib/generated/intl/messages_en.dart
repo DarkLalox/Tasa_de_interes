@@ -22,9 +22,6 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
-        "simpleTex9":
-            MessageLookupByLibrary.simpleMessage("Network request failed"),
-        "simpleTexct15": MessageLookupByLibrary.simpleMessage("Invalid fields"),
         "simpleText": MessageLookupByLibrary.simpleMessage("Sign in"),
         "simpleText10": MessageLookupByLibrary.simpleMessage("User disabled"),
         "simpleText11": MessageLookupByLibrary.simpleMessage("User not found"),
@@ -32,13 +29,26 @@ class MessageLookup extends MessageLookupByLibrary {
         "simpleText13":
             MessageLookupByLibrary.simpleMessage("Too Many Requests"),
         "simpleText14": MessageLookupByLibrary.simpleMessage("Unknown error"),
+        "simpleText15": MessageLookupByLibrary.simpleMessage("Invalid fields"),
+        "simpleText16": MessageLookupByLibrary.simpleMessage("Sign up"),
+        "simpleText17": MessageLookupByLibrary.simpleMessage("Name"),
+        "simpleText18": MessageLookupByLibrary.simpleMessage("Invalid name"),
+        "simpleText19": MessageLookupByLibrary.simpleMessage("Name PYME"),
         "simpleText2": MessageLookupByLibrary.simpleMessage("Fogot password?"),
+        "simpleText20": MessageLookupByLibrary.simpleMessage("Enter PYME"),
+        "simpleText21":
+            MessageLookupByLibrary.simpleMessage("Verification password"),
+        "simpleText22":
+            MessageLookupByLibrary.simpleMessage("Password don\'t match"),
+        "simpleText23": MessageLookupByLibrary.simpleMessage("Register"),
         "simpleText3":
             MessageLookupByLibrary.simpleMessage("Don\'t have an account?"),
         "simpleText4": MessageLookupByLibrary.simpleMessage("Sign up"),
         "simpleText5": MessageLookupByLibrary.simpleMessage("Email"),
         "simpleText6": MessageLookupByLibrary.simpleMessage("Invalid email"),
         "simpleText7": MessageLookupByLibrary.simpleMessage("Invalid password"),
-        "simpleText8": MessageLookupByLibrary.simpleMessage("Password")
+        "simpleText8": MessageLookupByLibrary.simpleMessage("Password"),
+        "simpleText9":
+            MessageLookupByLibrary.simpleMessage("Network request failed")
       };
 }

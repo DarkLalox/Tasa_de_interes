@@ -29,10 +29,25 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Usuario no encontrado"),
         "simpleText12":
             MessageLookupByLibrary.simpleMessage("Contraseña Equivocada"),
+        "simpleText13":
+            MessageLookupByLibrary.simpleMessage("Demaciadas peticiones"),
         "simpleText14":
             MessageLookupByLibrary.simpleMessage("Error desconocido"),
+        "simpleText15":
+            MessageLookupByLibrary.simpleMessage("Campos Inválidos"),
+        "simpleText16": MessageLookupByLibrary.simpleMessage("Registrarse"),
+        "simpleText17": MessageLookupByLibrary.simpleMessage("Nombre"),
+        "simpleText18":
+            MessageLookupByLibrary.simpleMessage("Nombre es inválido"),
+        "simpleText19": MessageLookupByLibrary.simpleMessage("Nombre PYME"),
         "simpleText2":
             MessageLookupByLibrary.simpleMessage("¿Olvidaste tu contraseña?"),
+        "simpleText20": MessageLookupByLibrary.simpleMessage("Ingresar PYME"),
+        "simpleText21":
+            MessageLookupByLibrary.simpleMessage("Confirmar contraseña"),
+        "simpleText22": MessageLookupByLibrary.simpleMessage(
+            "La contraseña de verificación no coincide"),
+        "simpleText23": MessageLookupByLibrary.simpleMessage("Registro"),
         "simpleText3":
             MessageLookupByLibrary.simpleMessage("¿No tienes una cuenta?"),
         "simpleText4": MessageLookupByLibrary.simpleMessage("Registrar"),
@@ -42,6 +57,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "El Correo electrónico es inválido"),
         "simpleText7":
             MessageLookupByLibrary.simpleMessage("La contraseña es inválida"),
-        "simpleText8": MessageLookupByLibrary.simpleMessage("Contraseña")
+        "simpleText8": MessageLookupByLibrary.simpleMessage("Contraseña"),
+        "simpleText9":
+            MessageLookupByLibrary.simpleMessage("Solicitud de red fallida")
       };
 }

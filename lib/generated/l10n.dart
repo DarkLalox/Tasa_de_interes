@@ -131,10 +131,10 @@ class S {
   }
 
   /// `Network request failed`
-  String get simpleTex9 {
+  String get simpleText9 {
     return Intl.message(
       'Network request failed',
-      name: 'simpleTex9',
+      name: 'simpleText9',
       desc: '',
       args: [],
     );
@@ -191,10 +191,90 @@ class S {
   }
 
   /// `Invalid fields`
-  String get simpleTexct15 {
+  String get simpleText15 {
     return Intl.message(
       'Invalid fields',
-      name: 'simpleTexct15',
+      name: 'simpleText15',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Sign up`
+  String get simpleText16 {
+    return Intl.message(
+      'Sign up',
+      name: 'simpleText16',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Name`
+  String get simpleText17 {
+    return Intl.message(
+      'Name',
+      name: 'simpleText17',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Invalid name`
+  String get simpleText18 {
+    return Intl.message(
+      'Invalid name',
+      name: 'simpleText18',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Name PYME`
+  String get simpleText19 {
+    return Intl.message(
+      'Name PYME',
+      name: 'simpleText19',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Enter PYME`
+  String get simpleText20 {
+    return Intl.message(
+      'Enter PYME',
+      name: 'simpleText20',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Verification password`
+  String get simpleText21 {
+    return Intl.message(
+      'Verification password',
+      name: 'simpleText21',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Password don't match`
+  String get simpleText22 {
+    return Intl.message(
+      'Password don\'t match',
+      name: 'simpleText22',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Register`
+  String get simpleText23 {
+    return Intl.message(
+      'Register',
+      name: 'simpleText23',
       desc: '',
       args: [],
     );

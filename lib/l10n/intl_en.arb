@@ -7,11 +7,19 @@
     "simpleText6":"Invalid email",
     "simpleText7":"Invalid password",
     "simpleText8":"Password",
-    "simpleTex9":"Network request failed",
+    "simpleText9":"Network request failed",
     "simpleText10":"User disabled",
     "simpleText11":"User not found",
     "simpleText12":"Wrong password",
     "simpleText13":"Too Many Requests",
     "simpleText14":"Unknown error",
-    "simpleTexct15":"Invalid fields"
+    "simpleText15":"Invalid fields",
+    "simpleText16":"Sign up",
+    "simpleText17":"Name",
+    "simpleText18":"Invalid name",
+    "simpleText19":"Name PYME",
+    "simpleText20":"Enter PYME",
+    "simpleText21":"Verification password",
+    "simpleText22":"Password don't match",
+    "simpleText23":"Register"
 }   
