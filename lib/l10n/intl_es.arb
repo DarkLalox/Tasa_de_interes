@@ -6,5 +6,13 @@
     "simpleText5":"Correo electrónico",
     "simpleText6":"El Correo electrónico es inválido",
     "simpleText7":"La contraseña es inválida",
-    "simpleText8":"Contraseña"
+    "simpleText8":"Contraseña",
+    "simpleText9":"Solicitud de red fallida",
+    "simpleText10":"Usuario Deshabilitado",
+    "simpleText11":"Usuario no encontrado",
+    "simpleText12":"Contraseña Equivocada",
+    "simpleTect13":"Demaciadas peticiones",
+    "simpleText14":"Error desconocido",
+    "simpleText15":"Campos Inválidos"
+
 }

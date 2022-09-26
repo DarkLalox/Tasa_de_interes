@@ -22,7 +22,16 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "simpleTex9":
+            MessageLookupByLibrary.simpleMessage("Network request failed"),
+        "simpleTexct15": MessageLookupByLibrary.simpleMessage("Invalid fields"),
         "simpleText": MessageLookupByLibrary.simpleMessage("Sign in"),
+        "simpleText10": MessageLookupByLibrary.simpleMessage("User disabled"),
+        "simpleText11": MessageLookupByLibrary.simpleMessage("User not found"),
+        "simpleText12": MessageLookupByLibrary.simpleMessage("Wrong password"),
+        "simpleText13":
+            MessageLookupByLibrary.simpleMessage("Too Many Requests"),
+        "simpleText14": MessageLookupByLibrary.simpleMessage("Unknown error"),
         "simpleText2": MessageLookupByLibrary.simpleMessage("Fogot password?"),
         "simpleText3":
             MessageLookupByLibrary.simpleMessage("Don\'t have an account?"),

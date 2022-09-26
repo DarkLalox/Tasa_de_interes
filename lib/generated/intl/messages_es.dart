@@ -23,6 +23,14 @@ class MessageLookup extends MessageLookupByLibrary {
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "simpleText": MessageLookupByLibrary.simpleMessage("Iniciar sesión"),
+        "simpleText10":
+            MessageLookupByLibrary.simpleMessage("Usuario Deshabilitado"),
+        "simpleText11":
+            MessageLookupByLibrary.simpleMessage("Usuario no encontrado"),
+        "simpleText12":
+            MessageLookupByLibrary.simpleMessage("Contraseña Equivocada"),
+        "simpleText14":
+            MessageLookupByLibrary.simpleMessage("Error desconocido"),
         "simpleText2":
             MessageLookupByLibrary.simpleMessage("¿Olvidaste tu contraseña?"),
         "simpleText3":

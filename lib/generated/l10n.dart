@@ -129,6 +129,76 @@ class S {
       args: [],
     );
   }
+
+  /// `Network request failed`
+  String get simpleTex9 {
+    return Intl.message(
+      'Network request failed',
+      name: 'simpleTex9',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `User disabled`
+  String get simpleText10 {
+    return Intl.message(
+      'User disabled',
+      name: 'simpleText10',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `User not found`
+  String get simpleText11 {
+    return Intl.message(
+      'User not found',
+      name: 'simpleText11',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Wrong password`
+  String get simpleText12 {
+    return Intl.message(
+      'Wrong password',
+      name: 'simpleText12',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Too Many Requests`
+  String get simpleText13 {
+    return Intl.message(
+      'Too Many Requests',
+      name: 'simpleText13',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Unknown error`
+  String get simpleText14 {
+    return Intl.message(
+      'Unknown error',
+      name: 'simpleText14',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Invalid fields`
+  String get simpleTexct15 {
+    return Intl.message(
+      'Invalid fields',
+      name: 'simpleTexct15',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

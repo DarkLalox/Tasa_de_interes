@@ -6,5 +6,12 @@
     "simpleText5":"Email",
     "simpleText6":"Invalid email",
     "simpleText7":"Invalid password",
-    "simpleText8":"Password"
-}
+    "simpleText8":"Password",
+    "simpleTex9":"Network request failed",
+    "simpleText10":"User disabled",
+    "simpleText11":"User not found",
+    "simpleText12":"Wrong password",
+    "simpleText13":"Too Many Requests",
+    "simpleText14":"Unknown error",
+    "simpleTexct15":"Invalid fields"
+}   
