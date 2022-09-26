@@ -8,6 +8,7 @@ import 'package:tesis_1/app/ui/pages/home/tabs/home/interest_rate_page.dart';
 import 'package:tesis_1/app/ui/pages/home/tabs/home/language_page.dart';
 import 'package:tesis_1/app/ui/pages/home/tabs/home/news/news_page.dart';
 import 'package:tesis_1/app/ui/routes/routes.dart';
+import 'package:tesis_1/generated/l10n.dart';
 
 class HomeTab extends ConsumerWidget {
   const HomeTab({Key? key}) : super(key: key);
@@ -29,8 +30,8 @@ class HomeTab extends ConsumerWidget {
           children: [
             const SizedBox(height: 40),
             Container(
-              child: Text("Hola, ${splilName.first}",
-                  style: TextStyle(
+              child: Text(S.of(context).textWithPlaceholder(splilName.first),
+                  style: const TextStyle(
                     fontSize: 25,
                     fontWeight: FontWeight.bold,
                   )),
@@ -43,13 +44,13 @@ class HomeTab extends ConsumerWidget {
               ),
             ),
             const SizedBox(height: 30),
-            const Text(
-              "Aplicación móvil con información útil de las tasas de interés recopiladas ",
-              style: TextStyle(fontSize: 10),
+            Text(
+              S.of(context).simpleText39,
+              style: const TextStyle(fontSize: 10),
             ),
-            const Text(
-              "del Banco Central de Chile y noticias recopiladas de NewApi ",
-              style: TextStyle(fontSize: 10),
+            Text(
+              S.of(context).simpleText40,
+              style: const TextStyle(fontSize: 10),
             ),
           ],
         ),
@@ -116,27 +117,27 @@ class NavigationDrawer extends ConsumerWidget {
       child: Column(
         children: [
           ListTile(
-              title: const Text('Inicio'),
+              title: Text(S.of(context).simpleText41),
               leading: const Icon(Icons.home),
               onTap: () {
                 router.push(const HomePage());
               }),
           ListTile(
-            title: const Text('Tasa de interés'),
+            title: Text(S.of(context).simpleText42),
             leading: const Icon(Icons.graphic_eq_rounded),
             onTap: () {
               router.push(const InterestRate());
             },
           ),
           ListTile(
-            title: const Text('Gráficos'),
+            title: Text(S.of(context).simpleText43),
             leading: const Icon(Icons.bar_chart),
             onTap: () {
               router.push(const Graphic());
             },
           ),
           ListTile(
-            title: const Text('Noticias'),
+            title: Text(S.of(context).simpleText44),
             leading: const Icon(Icons.auto_stories_outlined),
             onTap: () {
               router.push(const News());
@@ -144,14 +145,14 @@ class NavigationDrawer extends ConsumerWidget {
           ),
           Divider(color: isDark ? Colors.white : Colors.black54),
           ListTile(
-            title: const Text('Idioma'),
+            title: Text(S.of(context).simpleText45),
             leading: const Icon(Icons.language),
             onTap: () {
               router.push(const Language());
             },
           ),
           ListTile(
-            title: const Text('Cerrar Sesión'),
+            title: Text(S.of(context).simpleText36),
             leading: const Icon(Icons.exit_to_app),
             onTap: () async {
               await sessionProvider.read.signOut();

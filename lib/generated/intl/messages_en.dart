@@ -20,6 +20,8 @@ typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'en';
 
+  static String m0(name) => "Welcome, ${name}";
+
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "simpleText": MessageLookupByLibrary.simpleMessage("Sign in"),
@@ -61,12 +63,22 @@ class MessageLookup extends MessageLookupByLibrary {
         "simpleText36": MessageLookupByLibrary.simpleMessage("Sign out"),
         "simpleText37": MessageLookupByLibrary.simpleMessage("Save"),
         "simpleText38": MessageLookupByLibrary.simpleMessage("Cancel"),
+        "simpleText39": MessageLookupByLibrary.simpleMessage(
+            "Mobile application with useful information on interest rates collected"),
         "simpleText4": MessageLookupByLibrary.simpleMessage("Sign up"),
+        "simpleText40": MessageLookupByLibrary.simpleMessage(
+            "from the Central Bank of Chile and news collected from NewApi"),
+        "simpleText41": MessageLookupByLibrary.simpleMessage("Home"),
+        "simpleText42": MessageLookupByLibrary.simpleMessage("Interest rate"),
+        "simpleText43": MessageLookupByLibrary.simpleMessage("Graphics"),
+        "simpleText44": MessageLookupByLibrary.simpleMessage("News"),
+        "simpleText45": MessageLookupByLibrary.simpleMessage("Language"),
         "simpleText5": MessageLookupByLibrary.simpleMessage("Email"),
         "simpleText6": MessageLookupByLibrary.simpleMessage("Invalid email"),
         "simpleText7": MessageLookupByLibrary.simpleMessage("Invalid password"),
         "simpleText8": MessageLookupByLibrary.simpleMessage("Password"),
         "simpleText9":
-            MessageLookupByLibrary.simpleMessage("Network request failed")
+            MessageLookupByLibrary.simpleMessage("Network request failed"),
+        "textWithPlaceholder": m0
       };
 }

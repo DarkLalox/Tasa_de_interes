@@ -36,7 +36,14 @@
     "simpleText35":"Modo oscuro",
     "simpleText36":"Cerrar sesión",
     "simpleText37":"Guardar",
-    "simpleText38":"Cancelar"
-
+    "simpleText38":"Cancelar",
+    "textWithPlaceholder": "Hola, {name}",
+    "simpleText39":"Aplicación móvil con información útil de las tasas de interés recopiladas",
+    "simpleText40":"del Banco Central de Chile y noticias recopiladas de NewApi",
+    "simpleText41":"Inicio",
+    "simpleText42":"Tasa de interés",
+    "simpleText43":"Gráficos",
+    "simpleText44":"Noticias",
+    "simpleText45":"Idioma"
 
 }

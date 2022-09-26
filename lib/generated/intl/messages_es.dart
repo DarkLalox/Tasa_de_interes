@@ -20,6 +20,8 @@ typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'es';
 
+  static String m0(name) => "Hola, ${name}";
+
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "simpleText": MessageLookupByLibrary.simpleMessage("Iniciar sesión"),
@@ -72,7 +74,16 @@ class MessageLookup extends MessageLookupByLibrary {
         "simpleText36": MessageLookupByLibrary.simpleMessage("Cerrar sesión"),
         "simpleText37": MessageLookupByLibrary.simpleMessage("Guardar"),
         "simpleText38": MessageLookupByLibrary.simpleMessage("Cancelar"),
+        "simpleText39": MessageLookupByLibrary.simpleMessage(
+            "Aplicación móvil con información útil de las tasas de interés recopiladas"),
         "simpleText4": MessageLookupByLibrary.simpleMessage("Registrar"),
+        "simpleText40": MessageLookupByLibrary.simpleMessage(
+            "del Banco Central de Chile y noticias recopiladas de NewApi"),
+        "simpleText41": MessageLookupByLibrary.simpleMessage("Inicio"),
+        "simpleText42": MessageLookupByLibrary.simpleMessage("Tasa de interés"),
+        "simpleText43": MessageLookupByLibrary.simpleMessage("Gráficos"),
+        "simpleText44": MessageLookupByLibrary.simpleMessage("Noticias"),
+        "simpleText45": MessageLookupByLibrary.simpleMessage("Idioma"),
         "simpleText5":
             MessageLookupByLibrary.simpleMessage("Correo electrónico"),
         "simpleText6": MessageLookupByLibrary.simpleMessage(
@@ -81,6 +92,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("La contraseña es inválida"),
         "simpleText8": MessageLookupByLibrary.simpleMessage("Contraseña"),
         "simpleText9":
-            MessageLookupByLibrary.simpleMessage("Solicitud de red fallida")
+            MessageLookupByLibrary.simpleMessage("Solicitud de red fallida"),
+        "textWithPlaceholder": m0
       };
 }

@@ -429,6 +429,86 @@ class S {
       args: [],
     );
   }
+
+  /// `Welcome, {name}`
+  String textWithPlaceholder(Object name) {
+    return Intl.message(
+      'Welcome, $name',
+      name: 'textWithPlaceholder',
+      desc: '',
+      args: [name],
+    );
+  }
+
+  /// `Mobile application with useful information on interest rates collected`
+  String get simpleText39 {
+    return Intl.message(
+      'Mobile application with useful information on interest rates collected',
+      name: 'simpleText39',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `from the Central Bank of Chile and news collected from NewApi`
+  String get simpleText40 {
+    return Intl.message(
+      'from the Central Bank of Chile and news collected from NewApi',
+      name: 'simpleText40',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Home`
+  String get simpleText41 {
+    return Intl.message(
+      'Home',
+      name: 'simpleText41',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Interest rate`
+  String get simpleText42 {
+    return Intl.message(
+      'Interest rate',
+      name: 'simpleText42',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Graphics`
+  String get simpleText43 {
+    return Intl.message(
+      'Graphics',
+      name: 'simpleText43',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `News`
+  String get simpleText44 {
+    return Intl.message(
+      'News',
+      name: 'simpleText44',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Language`
+  String get simpleText45 {
+    return Intl.message(
+      'Language',
+      name: 'simpleText45',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

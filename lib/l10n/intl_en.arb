@@ -36,6 +36,14 @@
     "simpleText35":"Dark mode",
     "simpleText36":"Sign out",
     "simpleText37":"Save",
-    "simpleText38":"Cancel"
+    "simpleText38":"Cancel",
+    "textWithPlaceholder": "Welcome, {name}",
+    "simpleText39":"Mobile application with useful information on interest rates collected",
+    "simpleText40":"from the Central Bank of Chile and news collected from NewApi",
+    "simpleText41":"Home",
+    "simpleText42":"Interest rate",
+    "simpleText43":"Graphics",
+    "simpleText44":"News",
+    "simpleText45":"Language"
 
 }   
