@@ -44,6 +44,11 @@
     "simpleText42":"Tasa de interés",
     "simpleText43":"Gráficos",
     "simpleText44":"Noticias",
-    "simpleText45":"Idioma"
+    "simpleText45":"Idioma",
+    "simpleText46":"Calculadora de TPM",
+    "simpleText47":"No hay datos",
+    "simpleText48":"Elige una fecha",
+    "textWithPlaceholder2":"El día {day}",
+    "textWithPlaceholder3":"La Tasa de interés es : {interest} %"
 
 }

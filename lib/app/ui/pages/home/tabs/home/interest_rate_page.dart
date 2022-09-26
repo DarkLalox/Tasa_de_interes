@@ -6,6 +6,7 @@ import 'package:tesis_1/app/data/data_source/services/interest_service.dart';
 import 'package:tesis_1/app/ui/pages/home/tabs/home/news/widgets/list_interest.dart';
 import 'package:http/http.dart' as http;
 import 'package:intl/intl.dart';
+import 'package:tesis_1/generated/l10n.dart';
 
 class InterestRate extends StatelessWidget {
   const InterestRate({Key? key}) : super(key: key);
@@ -14,7 +15,7 @@ class InterestRate extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: const Text("Tasa de interés"),
+          title: Text(S.of(context).simpleText42),
         ),
         body: SingleChildScrollView(
           child: Center(
@@ -59,8 +60,8 @@ class _DateState extends State<_Date> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
-              const Text('Calculador TPM',
-                  style: TextStyle(
+              Text(S.of(context).simpleText46,
+                  style: const TextStyle(
                     fontWeight: FontWeight.bold,
                     fontSize: 28,
                   )),
@@ -102,16 +103,16 @@ class _DateState extends State<_Date> {
                       } else {
                         if (!mounted) return;
                         setState(() {
-                          _tasa = "No hay datos";
+                          _tasa = S.of(context).simpleText47;
                           loading = false;
                         });
                       }
                     }
                   },
                   icon: const Icon(Icons.calendar_today),
-                  label: const Text(
-                    "Elige una fecha",
-                    style: TextStyle(fontSize: 25),
+                  label: Text(
+                    S.of(context).simpleText48,
+                    style: const TextStyle(fontSize: 25),
                   ),
                 ),
               ),
@@ -121,7 +122,9 @@ class _DateState extends State<_Date> {
                   (_date == '???')
                       ? const Text(" ")
                       : Text(
-                          'El día ${DateFormat('dd-MM-yyyy').format(DateTime.parse(_date))}',
+                          S.of(context).textWithPlaceholder2(
+                              DateFormat('dd-MM-yyyy')
+                                  .format(DateTime.parse(_date))),
                           style: const TextStyle(
                             fontWeight: FontWeight.bold,
                             fontSize: 16,
@@ -131,7 +134,7 @@ class _DateState extends State<_Date> {
                       ? const CircularProgressIndicator()
                       : (_tasa == '???')
                           ? const Text(" ")
-                          : Text('La Tasa de interés es : $_tasa %',
+                          : Text(S.of(context).textWithPlaceholder3(_tasa),
                               style: const TextStyle(
                                 fontWeight: FontWeight.bold,
                                 fontSize: 16,

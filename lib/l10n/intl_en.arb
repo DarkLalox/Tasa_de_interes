@@ -44,6 +44,11 @@
     "simpleText42":"Interest rate",
     "simpleText43":"Graphics",
     "simpleText44":"News",
-    "simpleText45":"Language"
+    "simpleText45":"Language",
+    "simpleText46":"MPR calculator",
+    "simpleText47":"No data",
+    "simpleText48":"Choose a date",
+    "textWithPlaceholder2":"The day {day}",
+    "textWithPlaceholder3":"The interest rate is : {interest} %"
 
 }   

@@ -509,6 +509,56 @@ class S {
       args: [],
     );
   }
+
+  /// `MPR calculator`
+  String get simpleText46 {
+    return Intl.message(
+      'MPR calculator',
+      name: 'simpleText46',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `No data`
+  String get simpleText47 {
+    return Intl.message(
+      'No data',
+      name: 'simpleText47',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Choose a date`
+  String get simpleText48 {
+    return Intl.message(
+      'Choose a date',
+      name: 'simpleText48',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The day {day}`
+  String textWithPlaceholder2(Object day) {
+    return Intl.message(
+      'The day $day',
+      name: 'textWithPlaceholder2',
+      desc: '',
+      args: [day],
+    );
+  }
+
+  /// `The interest rate is : {interest} %`
+  String textWithPlaceholder3(Object interest) {
+    return Intl.message(
+      'The interest rate is : $interest %',
+      name: 'textWithPlaceholder3',
+      desc: '',
+      args: [interest],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

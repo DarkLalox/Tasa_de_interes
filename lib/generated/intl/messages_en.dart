@@ -22,6 +22,10 @@ class MessageLookup extends MessageLookupByLibrary {
 
   static String m0(name) => "Welcome, ${name}";
 
+  static String m1(day) => "The day ${day}";
+
+  static String m2(interest) => "The interest rate is : ${interest} %";
+
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "simpleText": MessageLookupByLibrary.simpleMessage("Sign in"),
@@ -73,12 +77,17 @@ class MessageLookup extends MessageLookupByLibrary {
         "simpleText43": MessageLookupByLibrary.simpleMessage("Graphics"),
         "simpleText44": MessageLookupByLibrary.simpleMessage("News"),
         "simpleText45": MessageLookupByLibrary.simpleMessage("Language"),
+        "simpleText46": MessageLookupByLibrary.simpleMessage("MPR calculator"),
+        "simpleText47": MessageLookupByLibrary.simpleMessage("No data"),
+        "simpleText48": MessageLookupByLibrary.simpleMessage("Choose a date"),
         "simpleText5": MessageLookupByLibrary.simpleMessage("Email"),
         "simpleText6": MessageLookupByLibrary.simpleMessage("Invalid email"),
         "simpleText7": MessageLookupByLibrary.simpleMessage("Invalid password"),
         "simpleText8": MessageLookupByLibrary.simpleMessage("Password"),
         "simpleText9":
             MessageLookupByLibrary.simpleMessage("Network request failed"),
-        "textWithPlaceholder": m0
+        "textWithPlaceholder": m0,
+        "textWithPlaceholder2": m1,
+        "textWithPlaceholder3": m2
       };
 }
