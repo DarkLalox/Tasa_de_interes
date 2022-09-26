@@ -1,10 +1,10 @@
 import 'dart:ffi';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_meedu/ui.dart';
 import 'package:tesis_1/app/domain/models/news_models.dart';
 import 'package:tesis_1/app/ui/global_widgets/rounded_button.dart';
 import 'package:tesis_1/app/ui/pages/home/tabs/home/news/news_page.dart';
+import 'package:tesis_1/generated/l10n.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class List_News extends StatelessWidget {
@@ -79,7 +79,7 @@ class _CardButtons extends StatelessWidget {
                 // ignore: deprecated_member_use
                 launch(newss.url);
               },
-              child: const Text("Ver más..."),
+              child: Text(S.of(context).simpleText61),
             ),
           ),
         ],
@@ -137,10 +137,10 @@ class _CardTitle extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.symmetric(horizontal: 15),
+      padding: const EdgeInsets.symmetric(horizontal: 15),
       child: Text(
         newss.title,
-        style: TextStyle(fontSize: 20, fontWeight: FontWeight.w700),
+        style: const TextStyle(fontSize: 20, fontWeight: FontWeight.w700),
       ),
     );
   }
@@ -154,13 +154,13 @@ class _CardTopBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.symmetric(horizontal: 10),
-      margin: EdgeInsets.only(bottom: 10),
+      padding: const EdgeInsets.symmetric(horizontal: 10),
+      margin: const EdgeInsets.only(bottom: 10),
       child: Row(
         children: <Widget>[
           Text(
             '${index + 1}. ',
-            style: TextStyle(color: Colors.red),
+            style: const TextStyle(color: Colors.red),
           ),
           Text('${newss.source.name}. '),
         ],

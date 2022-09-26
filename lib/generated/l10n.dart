@@ -679,6 +679,16 @@ class S {
       args: [],
     );
   }
+
+  /// `See more...`
+  String get simpleText61 {
+    return Intl.message(
+      'See more...',
+      name: 'simpleText61',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

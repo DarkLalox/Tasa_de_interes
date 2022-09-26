@@ -5,6 +5,7 @@ import 'package:tesis_1/app/ui/pages/home/tabs/home/news/news_controller.dart';
 import 'package:tesis_1/app/ui/pages/home/tabs/home/news/tabs/news_international/international_tab.dart';
 import 'package:tesis_1/app/ui/pages/home/tabs/home/news/tabs/news_national/national_tab.dart';
 import 'package:tesis_1/app/ui/pages/home/tabs/home/news/widgets/news_tab_bar.dart';
+import 'package:tesis_1/generated/l10n.dart';
 
 final newsProvider = SimpleProvider(
   (_) => NewsController(),
@@ -20,7 +21,7 @@ class News extends StatelessWidget {
         return Scaffold(
           bottomNavigationBar: NewsTabBar(),
           appBar: AppBar(
-            title: const Text("Noticias"),
+            title: Text(S.of(context).simpleText44),
           ),
           body: SafeArea(
               child: TabBarView(

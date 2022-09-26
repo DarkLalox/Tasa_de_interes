@@ -114,6 +114,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "El Correo electrónico es inválido"),
         "simpleText60":
             MessageLookupByLibrary.simpleMessage("Gráfico comercial"),
+        "simpleText61": MessageLookupByLibrary.simpleMessage("Ver más..."),
         "simpleText7":
             MessageLookupByLibrary.simpleMessage("La contraseña es inválida"),
         "simpleText8": MessageLookupByLibrary.simpleMessage("Contraseña"),

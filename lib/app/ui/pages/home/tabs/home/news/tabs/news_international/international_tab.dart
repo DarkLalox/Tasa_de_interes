@@ -24,7 +24,7 @@ class _InternationalTabState extends State<InternationalTab>
         final controller = ref.watch(NewsService22);
         return Scaffold(
             body: (controller.headlines2.length == 0)
-                ? Center(child: CircularProgressIndicator())
+                ? const Center(child: CircularProgressIndicator())
                 : List_News(controller.headlines2));
       }),
     );

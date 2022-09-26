@@ -98,6 +98,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "simpleText6": MessageLookupByLibrary.simpleMessage("Invalid email"),
         "simpleText60":
             MessageLookupByLibrary.simpleMessage("Commercial chart"),
+        "simpleText61": MessageLookupByLibrary.simpleMessage("See more..."),
         "simpleText7": MessageLookupByLibrary.simpleMessage("Invalid password"),
         "simpleText8": MessageLookupByLibrary.simpleMessage("Password"),
         "simpleText9":
