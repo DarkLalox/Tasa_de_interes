@@ -55,6 +55,12 @@
     "simpleText51":"Consumo",
     "simpleText52":"Vivienda",
     "simpleText53":"Comercio exterior",
-    "simpleText54":"Comerciales"
+    "simpleText54":"Comerciales",
+    "simpleText55":"Gráfico TPM",
+    "simpleText56":"Gráfico TIB",
+    "simpleText57":"Gráfico vivienda",
+    "simpleText58":"Gráfico comercio exterior",
+    "simpleText59":"Gráfico consumo",
+    "simpleText60":"Gráfico comercial"
 
 }

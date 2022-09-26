@@ -619,6 +619,66 @@ class S {
       args: [],
     );
   }
+
+  /// `MPR chart`
+  String get simpleText55 {
+    return Intl.message(
+      'MPR chart',
+      name: 'simpleText55',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `IBR chart`
+  String get simpleText56 {
+    return Intl.message(
+      'IBR chart',
+      name: 'simpleText56',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Housing chart`
+  String get simpleText57 {
+    return Intl.message(
+      'Housing chart',
+      name: 'simpleText57',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Foreign trade chart`
+  String get simpleText58 {
+    return Intl.message(
+      'Foreign trade chart',
+      name: 'simpleText58',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Consumer chart`
+  String get simpleText59 {
+    return Intl.message(
+      'Consumer chart',
+      name: 'simpleText59',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Commercial chart`
+  String get simpleText60 {
+    return Intl.message(
+      'Commercial chart',
+      name: 'simpleText60',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

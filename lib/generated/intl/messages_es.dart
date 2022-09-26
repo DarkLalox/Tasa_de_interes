@@ -103,8 +103,17 @@ class MessageLookup extends MessageLookupByLibrary {
         "simpleText53":
             MessageLookupByLibrary.simpleMessage("Comercio exterior"),
         "simpleText54": MessageLookupByLibrary.simpleMessage("Comerciales"),
+        "simpleText55": MessageLookupByLibrary.simpleMessage("Gráfico TPM"),
+        "simpleText56": MessageLookupByLibrary.simpleMessage("Gráfico TIB"),
+        "simpleText57":
+            MessageLookupByLibrary.simpleMessage("Gráfico vivienda"),
+        "simpleText58":
+            MessageLookupByLibrary.simpleMessage("Gráfico comercio exterior"),
+        "simpleText59": MessageLookupByLibrary.simpleMessage("Gráfico consumo"),
         "simpleText6": MessageLookupByLibrary.simpleMessage(
             "El Correo electrónico es inválido"),
+        "simpleText60":
+            MessageLookupByLibrary.simpleMessage("Gráfico comercial"),
         "simpleText7":
             MessageLookupByLibrary.simpleMessage("La contraseña es inválida"),
         "simpleText8": MessageLookupByLibrary.simpleMessage("Contraseña"),

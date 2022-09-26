@@ -5,6 +5,7 @@ import 'package:intl/intl.dart';
 import 'package:http/http.dart' as http;
 import 'package:tesis_1/app/tmp_graphic.dart';
 import 'package:tesis_1/app/tmp_graphic2.dart';
+import 'package:tesis_1/generated/l10n.dart';
 
 class Graphic_TPM extends StatelessWidget {
   const Graphic_TPM({Key? key}) : super(key: key);
@@ -14,7 +15,7 @@ class Graphic_TPM extends StatelessWidget {
     final isDark = context.isDarkMode;
     return Scaffold(
         appBar: AppBar(
-          title: const Text('Tasa de interés monetaria (TPM)'),
+          title: Text(S.of(context).simpleText49),
         ),
         body: Center(
           child: SingleChildScrollView(
@@ -53,7 +54,6 @@ class __DateTPMState extends State<_DateTPM> {
   List<TimeSeriesSales> _data = [];
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     InitialGraphic();
   }
@@ -92,8 +92,8 @@ class __DateTPMState extends State<_DateTPM> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
-            const Text("Gráfico TPM",
-                style: TextStyle(
+            Text(S.of(context).simpleText55,
+                style: const TextStyle(
                   fontWeight: FontWeight.bold,
                   fontSize: 20,
                 )),
@@ -132,7 +132,7 @@ class __DateTPMState extends State<_DateTPM> {
                       child: (loading == true)
                           ? Transform.scale(
                               scale: 0.3,
-                              child: CircularProgressIndicator(),
+                              child: const CircularProgressIndicator(),
                             )
                           : SimpleTimeSeriesChart.withSampleData(_data)),
                 ),
@@ -155,7 +155,7 @@ class __DateTPMState extends State<_DateTPM> {
             children: [
               const SizedBox(height: 100),
               ConstrainedBox(
-                constraints: BoxConstraints(
+                constraints: const BoxConstraints(
                   maxHeight: 550,
                   maxWidth: 380,
                 ),
@@ -212,7 +212,6 @@ class __DateTPMState1 extends State<_DateTPM1> {
   List<TimeSeriesSales1> _data1 = [];
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     InitialGraphic();
   }
@@ -251,8 +250,8 @@ class __DateTPMState1 extends State<_DateTPM1> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
-            const Text("Gráfico TPM",
-                style: TextStyle(
+            Text(S.of(context).simpleText55,
+                style: const TextStyle(
                   fontWeight: FontWeight.bold,
                   fontSize: 20,
                 )),
@@ -291,7 +290,7 @@ class __DateTPMState1 extends State<_DateTPM1> {
                       child: (loading == true)
                           ? Transform.scale(
                               scale: 0.3,
-                              child: CircularProgressIndicator(),
+                              child: const CircularProgressIndicator(),
                             )
                           : SimpleTimeSeriesChart1.withSampleData(_data1)),
                 ),

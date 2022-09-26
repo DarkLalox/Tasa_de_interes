@@ -55,7 +55,13 @@
     "simpleText51":"Consumer",
     "simpleText52":"Housing",
     "simpleText53":"Foreign trade",
-    "simpleText54":"Commercial"
+    "simpleText54":"Commercial",
+    "simpleText55":"MPR chart",
+    "simpleText56":"IBR chart",
+    "simpleText57":"Housing chart",
+    "simpleText58":"Foreign trade chart",
+    "simpleText59":"Consumer chart",
+    "simpleText60":"Commercial chart"
 
 
 }   

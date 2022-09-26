@@ -5,6 +5,7 @@ import 'package:intl/intl.dart';
 import 'package:http/http.dart' as http;
 import 'package:tesis_1/app/tmp_graphic.dart';
 import 'package:tesis_1/app/tmp_graphic2.dart';
+import 'package:tesis_1/generated/l10n.dart';
 
 class Graphic_Comercio_Exterior extends StatelessWidget {
   const Graphic_Comercio_Exterior({Key? key}) : super(key: key);
@@ -14,7 +15,7 @@ class Graphic_Comercio_Exterior extends StatelessWidget {
     final isDark = context.isDarkMode;
     return Scaffold(
         appBar: AppBar(
-          title: const Text('Comercio exterior'),
+          title: Text(S.of(context).simpleText53),
         ),
         body: Center(
           child: SingleChildScrollView(
@@ -55,7 +56,6 @@ class __DateComercio_ExteriorState extends State<_DateComercio_Exterior> {
   List<TimeSeriesSales> _data = [];
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     InitialGraphic();
   }
@@ -94,8 +94,8 @@ class __DateComercio_ExteriorState extends State<_DateComercio_Exterior> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
-            const Text("Gráfico Comercio Exterior",
-                style: TextStyle(
+            Text(S.of(context).simpleText58,
+                style: const TextStyle(
                   fontWeight: FontWeight.bold,
                   fontSize: 20,
                 )),
@@ -134,7 +134,7 @@ class __DateComercio_ExteriorState extends State<_DateComercio_Exterior> {
                       child: (loading == true)
                           ? Transform.scale(
                               scale: 0.3,
-                              child: CircularProgressIndicator(),
+                              child: const CircularProgressIndicator(),
                             )
                           : SimpleTimeSeriesChart.withSampleData(_data)),
                 ),
@@ -215,7 +215,6 @@ class __DateComercio_ExteriorState1 extends State<_DateComercio_Exterior1> {
   List<TimeSeriesSales1> _data1 = [];
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     InitialGraphic();
   }
@@ -254,8 +253,8 @@ class __DateComercio_ExteriorState1 extends State<_DateComercio_Exterior1> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
-            const Text("Gráfico Comercio Exterior",
-                style: TextStyle(
+            Text(S.of(context).simpleText58,
+                style: const TextStyle(
                   fontWeight: FontWeight.bold,
                   fontSize: 20,
                 )),
@@ -294,7 +293,7 @@ class __DateComercio_ExteriorState1 extends State<_DateComercio_Exterior1> {
                       child: (loading == true)
                           ? Transform.scale(
                               scale: 0.3,
-                              child: CircularProgressIndicator(),
+                              child: const CircularProgressIndicator(),
                             )
                           : SimpleTimeSeriesChart1.withSampleData(_data1)),
                 ),

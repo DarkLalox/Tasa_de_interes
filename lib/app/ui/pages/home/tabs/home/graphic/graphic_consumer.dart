@@ -5,6 +5,7 @@ import 'package:intl/intl.dart';
 import 'package:http/http.dart' as http;
 import 'package:tesis_1/app/tmp_graphic.dart';
 import 'package:tesis_1/app/tmp_graphic2.dart';
+import 'package:tesis_1/generated/l10n.dart';
 
 class Graphic_Consumo extends StatelessWidget {
   const Graphic_Consumo({Key? key}) : super(key: key);
@@ -14,7 +15,7 @@ class Graphic_Consumo extends StatelessWidget {
     final isDark = context.isDarkMode;
     return Scaffold(
         appBar: AppBar(
-          title: const Text('Consumo'),
+          title: Text(S.of(context).simpleText51),
         ),
         body: Center(
           child: SingleChildScrollView(
@@ -53,7 +54,6 @@ class __DateConsumoState extends State<_DateConsumo> {
   List<TimeSeriesSales> _data = [];
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     InitialGraphic();
   }
@@ -92,8 +92,8 @@ class __DateConsumoState extends State<_DateConsumo> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
-            const Text("Gráfico Consumo",
-                style: TextStyle(
+            Text(S.of(context).simpleText59,
+                style: const TextStyle(
                   fontWeight: FontWeight.bold,
                   fontSize: 20,
                 )),
@@ -132,7 +132,7 @@ class __DateConsumoState extends State<_DateConsumo> {
                       child: (loading == true)
                           ? Transform.scale(
                               scale: 0.3,
-                              child: CircularProgressIndicator(),
+                              child: const CircularProgressIndicator(),
                             )
                           : SimpleTimeSeriesChart.withSampleData(_data)),
                 ),
@@ -212,7 +212,6 @@ class __DateConsumoState1 extends State<_DateConsumo1> {
   List<TimeSeriesSales1> _data1 = [];
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     InitialGraphic();
   }
@@ -251,8 +250,8 @@ class __DateConsumoState1 extends State<_DateConsumo1> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
-            const Text("Gráfico Consumo",
-                style: TextStyle(
+            Text(S.of(context).simpleText59,
+                style: const TextStyle(
                   fontWeight: FontWeight.bold,
                   fontSize: 20,
                 )),
@@ -291,7 +290,7 @@ class __DateConsumoState1 extends State<_DateConsumo1> {
                       child: (loading == true)
                           ? Transform.scale(
                               scale: 0.3,
-                              child: CircularProgressIndicator(),
+                              child: const CircularProgressIndicator(),
                             )
                           : SimpleTimeSeriesChart1.withSampleData(_data1)),
                 ),

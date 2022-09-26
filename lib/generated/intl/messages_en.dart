@@ -89,7 +89,15 @@ class MessageLookup extends MessageLookupByLibrary {
         "simpleText52": MessageLookupByLibrary.simpleMessage("Housing"),
         "simpleText53": MessageLookupByLibrary.simpleMessage("Foreign trade"),
         "simpleText54": MessageLookupByLibrary.simpleMessage("Commercial"),
+        "simpleText55": MessageLookupByLibrary.simpleMessage("MPR chart"),
+        "simpleText56": MessageLookupByLibrary.simpleMessage("IBR chart"),
+        "simpleText57": MessageLookupByLibrary.simpleMessage("Housing chart"),
+        "simpleText58":
+            MessageLookupByLibrary.simpleMessage("Foreign trade chart"),
+        "simpleText59": MessageLookupByLibrary.simpleMessage("Consumer chart"),
         "simpleText6": MessageLookupByLibrary.simpleMessage("Invalid email"),
+        "simpleText60":
+            MessageLookupByLibrary.simpleMessage("Commercial chart"),
         "simpleText7": MessageLookupByLibrary.simpleMessage("Invalid password"),
         "simpleText8": MessageLookupByLibrary.simpleMessage("Password"),
         "simpleText9":
