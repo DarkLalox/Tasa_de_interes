@@ -299,6 +299,56 @@ class S {
       args: [],
     );
   }
+
+  /// `Reset password`
+  String get simpleText26 {
+    return Intl.message(
+      'Reset password',
+      name: 'simpleText26',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Enter your email to recive a link to change your password`
+  String get simpleText27 {
+    return Intl.message(
+      'Enter your email to recive a link to change your password',
+      name: 'simpleText27',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Send`
+  String get simpleText28 {
+    return Intl.message(
+      'Send',
+      name: 'simpleText28',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Good`
+  String get simpleText29 {
+    return Intl.message(
+      'Good',
+      name: 'simpleText29',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Email sent`
+  String get simpleText30 {
+    return Intl.message(
+      'Email sent',
+      name: 'simpleText30',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

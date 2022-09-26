@@ -23,5 +23,11 @@
     "simpleText22":"Password don't match",
     "simpleText23":"Register",
     "simpleText24":"Email is already in use",
-    "simpleText25":"Weak password"
+    "simpleText25":"Weak password",
+    "simpleText26":"Reset password",
+    "simpleText27":"Enter your email to recive a link to change your password",
+    "simpleText28":"Send",
+    "simpleText29":"Good",
+    "simpleText30":"Email sent"
+
 }   

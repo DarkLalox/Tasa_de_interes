@@ -23,7 +23,11 @@
     "simpleText22":"La contraseña de verificación no coincide",
     "simpleText23":"Registro",
     "simpleText24":"El Correo electrónico ya está en uso",
-    "simpleText25":"Contraseña débil"
-
+    "simpleText25":"Contraseña débil",
+    "simpleText26":"Restablecer contraseña",
+    "simpleText27":"Ingrese su correo electrónico para recibir un enlace para cambiar su contraseña",
+    "simpleText28":"Enviar",
+    "simpleText29":"Correo correcto",
+    "simpleText30":"Correo electrónico enviado"
 
 }

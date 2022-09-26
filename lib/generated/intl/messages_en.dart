@@ -44,8 +44,14 @@ class MessageLookup extends MessageLookupByLibrary {
         "simpleText24":
             MessageLookupByLibrary.simpleMessage("Email is already in use"),
         "simpleText25": MessageLookupByLibrary.simpleMessage("Weak password"),
+        "simpleText26": MessageLookupByLibrary.simpleMessage("Reset password"),
+        "simpleText27": MessageLookupByLibrary.simpleMessage(
+            "Enter your email to recive a link to change your password"),
+        "simpleText28": MessageLookupByLibrary.simpleMessage("Send"),
+        "simpleText29": MessageLookupByLibrary.simpleMessage("Good"),
         "simpleText3":
             MessageLookupByLibrary.simpleMessage("Don\'t have an account?"),
+        "simpleText30": MessageLookupByLibrary.simpleMessage("Email sent"),
         "simpleText4": MessageLookupByLibrary.simpleMessage("Sign up"),
         "simpleText5": MessageLookupByLibrary.simpleMessage("Email"),
         "simpleText6": MessageLookupByLibrary.simpleMessage("Invalid email"),

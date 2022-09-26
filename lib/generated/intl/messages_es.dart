@@ -52,8 +52,16 @@ class MessageLookup extends MessageLookupByLibrary {
             "El Correo electrónico ya está en uso"),
         "simpleText25":
             MessageLookupByLibrary.simpleMessage("Contraseña débil"),
+        "simpleText26":
+            MessageLookupByLibrary.simpleMessage("Restablecer contraseña"),
+        "simpleText27": MessageLookupByLibrary.simpleMessage(
+            "Ingrese su correo electrónico para recibir un enlace para cambiar su contraseña"),
+        "simpleText28": MessageLookupByLibrary.simpleMessage("Enviar"),
+        "simpleText29": MessageLookupByLibrary.simpleMessage("Correo correcto"),
         "simpleText3":
             MessageLookupByLibrary.simpleMessage("¿No tienes una cuenta?"),
+        "simpleText30":
+            MessageLookupByLibrary.simpleMessage("Correo electrónico enviado"),
         "simpleText4": MessageLookupByLibrary.simpleMessage("Registrar"),
         "simpleText5":
             MessageLookupByLibrary.simpleMessage("Correo electrónico"),

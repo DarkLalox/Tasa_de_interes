@@ -8,6 +8,7 @@ import 'package:tesis_1/app/ui/global_widgets/dialogs/dialogs.dart';
 import 'package:tesis_1/app/ui/global_widgets/dialogs/progress_dialog.dart';
 import 'package:tesis_1/app/ui/global_widgets/rounded_button.dart';
 import 'package:tesis_1/app/utils/email_validator.dart';
+import 'package:tesis_1/generated/l10n.dart';
 import 'controller/reset_password_controller.dart';
 
 final resetPasswordProvider = SimpleProvider(
@@ -52,11 +53,11 @@ class ResetPasswordPage extends StatelessWidget {
                             ),
                           ),
                           const SizedBox(height: 10),
-                          const Center(
+                          Center(
                             child: Text(
-                              "Restablecer contraseña",
+                              S.of(context).simpleText26,
                               textAlign: TextAlign.center,
-                              style: TextStyle(
+                              style: const TextStyle(
                                 fontSize: 20,
                                 fontWeight: FontWeight.bold,
                               ),
@@ -64,21 +65,21 @@ class ResetPasswordPage extends StatelessWidget {
                           ),
                           const SizedBox(height: 20),
                           CustomInputField(
-                            label: "Correo electrónico",
+                            label: S.of(context).simpleText5,
                             onChanged: controller.onEmailChanged,
                             inputType: TextInputType.emailAddress,
                           ),
                           const SizedBox(height: 5),
-                          const Text(
-                            "Ingrese su correo electrónico para recibir un enlace para cambiar su contraseña",
-                            style: TextStyle(fontSize: 10),
+                          Text(
+                            S.of(context).simpleText27,
+                            style: const TextStyle(fontSize: 10),
                           ),
                           const SizedBox(height: 20),
                           SizedBox(
                             width: double.infinity,
                             child: RoundedButton(
                                 onPressed: () => _submit(context),
-                                text: "Enviar"),
+                                text: S.of(context).simpleText28),
                           ),
                           const SizedBox(height: 30),
                         ],
@@ -103,27 +104,27 @@ class ResetPasswordPage extends StatelessWidget {
       if (response == ResetPasswordResponse.ok) {
         Dialogs.alert(
           context,
-          title: "Correo Correcto",
-          content: "Correo electrónico enviado",
+          title: S.of(context).simpleText29,
+          content: S.of(context).simpleText30,
         );
       } else {
         String errorMessage = "";
         switch (response) {
           case ResetPasswordResponse.networkRequestFailed:
-            errorMessage = "Solicitud de red fallida";
+            errorMessage = S.of(context).simpleText9;
             break;
           case ResetPasswordResponse.userDisabled:
-            errorMessage = "Usuario deshabilitado";
+            errorMessage = S.of(context).simpleText10;
             break;
           case ResetPasswordResponse.userNotFound:
-            errorMessage = "Usuario no encontrado";
+            errorMessage = S.of(context).simpleText11;
             break;
           case ResetPasswordResponse.tooManyRequest:
-            errorMessage = "Demaciadas peticiones";
+            errorMessage = S.of(context).simpleText13;
             break;
           case ResetPasswordResponse.unknown:
           default:
-            errorMessage = "Error desconocido";
+            errorMessage = S.of(context).simpleText14;
             break;
         }
         Dialogs.alert(
@@ -133,7 +134,7 @@ class ResetPasswordPage extends StatelessWidget {
         );
       }
     } else {
-      Dialogs.alert(context, content: "Correo electrónico inválido");
+      Dialogs.alert(context, content: S.of(context).simpleText6);
     }
   }
 }
