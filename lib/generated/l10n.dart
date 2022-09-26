@@ -409,6 +409,26 @@ class S {
       args: [],
     );
   }
+
+  /// `Save`
+  String get simpleText37 {
+    return Intl.message(
+      'Save',
+      name: 'simpleText37',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Cancel`
+  String get simpleText38 {
+    return Intl.message(
+      'Cancel',
+      name: 'simpleText38',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

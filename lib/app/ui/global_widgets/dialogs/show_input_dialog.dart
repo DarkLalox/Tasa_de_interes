@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_meedu/ui.dart';
+import 'package:tesis_1/generated/l10n.dart';
 
 Future<String?> showInputDialog(
   BuildContext context, {
@@ -28,14 +29,14 @@ Future<String?> showInputDialog(
           onPressed: () {
             Navigator.pop(context, value);
           },
-          child: const Text("Guardar"),
+          child: Text(S.of(context).simpleText37),
           isDefaultAction: true,
         ),
         CupertinoDialogAction(
           onPressed: () {
             Navigator.pop(context);
           },
-          child: const Text("Cancelar"),
+          child: Text(S.of(context).simpleText38),
           isDestructiveAction: true,
         )
       ],
