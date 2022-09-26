@@ -21,6 +21,9 @@
     "simpleText20":"Ingresar PYME",
     "simpleText21":"Confirmar contraseña",
     "simpleText22":"La contraseña de verificación no coincide",
-    "simpleText23":"Registro"
+    "simpleText23":"Registro",
+    "simpleText24":"El Correo electrónico ya está en uso",
+    "simpleText25":"Contraseña débil"
+
 
 }

@@ -279,6 +279,26 @@ class S {
       args: [],
     );
   }
+
+  /// `Email is already in use`
+  String get simpleText24 {
+    return Intl.message(
+      'Email is already in use',
+      name: 'simpleText24',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Weak password`
+  String get simpleText25 {
+    return Intl.message(
+      'Weak password',
+      name: 'simpleText25',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

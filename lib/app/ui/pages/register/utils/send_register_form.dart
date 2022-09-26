@@ -3,6 +3,7 @@ import 'package:tesis_1/app/domain/responses/sign_up_response.dart';
 import 'package:tesis_1/app/ui/global_widgets/dialogs/dialogs.dart';
 import 'package:tesis_1/app/ui/global_widgets/dialogs/progress_dialog.dart';
 import 'package:tesis_1/app/ui/routes/routes.dart';
+import 'package:tesis_1/generated/l10n.dart';
 import '../register_page.dart' show registerProvider;
 import 'package:flutter_meedu/ui.dart';
 
@@ -18,17 +19,17 @@ Future<void> sendRegisterForm(BuildContext context) async {
       late String content;
       switch (response.error) {
         case SignUpError.emailAlreadyInUse:
-          content = "El Correo electrónico ya está en uso";
+          content = S.of(context).simpleText24;
           break;
         case SignUpError.weakPassword:
-          content = "Contraseña débil";
+          content = S.of(context).simpleText25;
           break;
         case SignUpError.tooManyRequests:
-          content = "Demaciadas peticiones";
+          content = S.of(context).simpleText13;
           break;
         case SignUpError.unknown:
         default:
-          content = "Error desconocido";
+          content = S.of(context).simpleText14;
           break;
       }
       Dialogs.alert(
@@ -45,7 +46,7 @@ Future<void> sendRegisterForm(BuildContext context) async {
     Dialogs.alert(
       context,
       title: "ERROR",
-      content: "Campos inválidos",
+      content: S.of(context).simpleText15,
     );
   }
 }

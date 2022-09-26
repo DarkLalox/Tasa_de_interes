@@ -21,5 +21,7 @@
     "simpleText20":"Enter PYME",
     "simpleText21":"Verification password",
     "simpleText22":"Password don't match",
-    "simpleText23":"Register"
+    "simpleText23":"Register",
+    "simpleText24":"Email is already in use",
+    "simpleText25":"Weak password"
 }   

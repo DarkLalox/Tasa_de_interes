@@ -41,6 +41,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "simpleText22":
             MessageLookupByLibrary.simpleMessage("Password don\'t match"),
         "simpleText23": MessageLookupByLibrary.simpleMessage("Register"),
+        "simpleText24":
+            MessageLookupByLibrary.simpleMessage("Email is already in use"),
+        "simpleText25": MessageLookupByLibrary.simpleMessage("Weak password"),
         "simpleText3":
             MessageLookupByLibrary.simpleMessage("Don\'t have an account?"),
         "simpleText4": MessageLookupByLibrary.simpleMessage("Sign up"),

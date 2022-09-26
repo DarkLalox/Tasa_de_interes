@@ -48,6 +48,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "simpleText22": MessageLookupByLibrary.simpleMessage(
             "La contraseña de verificación no coincide"),
         "simpleText23": MessageLookupByLibrary.simpleMessage("Registro"),
+        "simpleText24": MessageLookupByLibrary.simpleMessage(
+            "El Correo electrónico ya está en uso"),
+        "simpleText25":
+            MessageLookupByLibrary.simpleMessage("Contraseña débil"),
         "simpleText3":
             MessageLookupByLibrary.simpleMessage("¿No tienes una cuenta?"),
         "simpleText4": MessageLookupByLibrary.simpleMessage("Registrar"),
