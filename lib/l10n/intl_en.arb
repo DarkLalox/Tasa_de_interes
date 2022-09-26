@@ -28,6 +28,11 @@
     "simpleText27":"Enter your email to recive a link to change your password",
     "simpleText28":"Send",
     "simpleText29":"Good",
-    "simpleText30":"Email sent"
-
+    "simpleText30":"Email sent",
+    "simpleText31":"Check your internet connection",
+    "simpleText32":"User",
+    "simpleText33":"Email verified",
+    "simpleText34":"YES",
+    "simpleText35":"Dark mode",
+    "simpleText36":"Sign out"
 }   

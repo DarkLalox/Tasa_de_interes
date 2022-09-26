@@ -349,6 +349,66 @@ class S {
       args: [],
     );
   }
+
+  /// `Check your internet connection`
+  String get simpleText31 {
+    return Intl.message(
+      'Check your internet connection',
+      name: 'simpleText31',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `User`
+  String get simpleText32 {
+    return Intl.message(
+      'User',
+      name: 'simpleText32',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Email verified`
+  String get simpleText33 {
+    return Intl.message(
+      'Email verified',
+      name: 'simpleText33',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `YES`
+  String get simpleText34 {
+    return Intl.message(
+      'YES',
+      name: 'simpleText34',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Dark mode`
+  String get simpleText35 {
+    return Intl.message(
+      'Dark mode',
+      name: 'simpleText35',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Sign out`
+  String get simpleText36 {
+    return Intl.message(
+      'Sign out',
+      name: 'simpleText36',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

@@ -52,6 +52,13 @@ class MessageLookup extends MessageLookupByLibrary {
         "simpleText3":
             MessageLookupByLibrary.simpleMessage("Don\'t have an account?"),
         "simpleText30": MessageLookupByLibrary.simpleMessage("Email sent"),
+        "simpleText31": MessageLookupByLibrary.simpleMessage(
+            "Check your internet connection"),
+        "simpleText32": MessageLookupByLibrary.simpleMessage("User"),
+        "simpleText33": MessageLookupByLibrary.simpleMessage("Email verified"),
+        "simpleText34": MessageLookupByLibrary.simpleMessage("YES"),
+        "simpleText35": MessageLookupByLibrary.simpleMessage("Dark mode"),
+        "simpleText36": MessageLookupByLibrary.simpleMessage("Sign out"),
         "simpleText4": MessageLookupByLibrary.simpleMessage("Sign up"),
         "simpleText5": MessageLookupByLibrary.simpleMessage("Email"),
         "simpleText6": MessageLookupByLibrary.simpleMessage("Invalid email"),

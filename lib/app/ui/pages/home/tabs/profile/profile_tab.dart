@@ -8,6 +8,7 @@ import 'package:tesis_1/app/ui/global_widgets/dialogs/progress_dialog.dart';
 import 'package:tesis_1/app/ui/global_widgets/dialogs/show_input_dialog.dart';
 import 'package:tesis_1/app/ui/pages/home/tabs/profile/widgets/label_button.dart';
 import 'package:tesis_1/app/ui/routes/routes.dart';
+import 'package:tesis_1/generated/l10n.dart';
 
 class ProfileTab extends ConsumerWidget {
   const ProfileTab({Key? key}) : super(key: key);
@@ -28,7 +29,7 @@ class ProfileTab extends ConsumerWidget {
         Dialogs.alert(
           context,
           title: "ERROR",
-          content: "Verificar tu conexión internet",
+          content: S.of(context).simpleText31,
         );
       }
     }
@@ -50,7 +51,7 @@ class ProfileTab extends ConsumerWidget {
         Dialogs.alert(
           context,
           title: "ERROR",
-          content: "Verificar tu conexión internet",
+          content: S.of(context).simpleText31,
         );
       }
     }
@@ -70,7 +71,7 @@ class ProfileTab extends ConsumerWidget {
         Dialogs.alert(
           context,
           title: "ERROR",
-          content: "Verificar tu conexión internet",
+          content: S.of(context).simpleText31,
         );
       }
     }
@@ -113,7 +114,7 @@ class ProfileTab extends ConsumerWidget {
         const SizedBox(height: 20),
         //const Text("Perfil"),
         LabelButton(
-          label: "Usuario",
+          label: S.of(context).simpleText32,
           value: splilName.first,
           onPressed: () => _updateDisplayName(context),
         ),
@@ -123,21 +124,21 @@ class ProfileTab extends ConsumerWidget {
           onPressed: () => _updateDisplayName2(context),
         ),
         LabelButton(
-            label: "Correo electrónico",
+            label: S.of(context).simpleText5,
             value: user.email ?? '',
             onPressed: () => _updateEmail(context)),
         LabelButton(
-          label: "Correo electrónico verificado",
-          value: user.emailVerified ? "YES" : "NO",
+          label: S.of(context).simpleText33,
+          value: user.emailVerified ? S.of(context).simpleText34 : "NO",
         ),
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 5),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              const Text(
-                "Modo Oscuro",
-                style: TextStyle(
+              Text(
+                S.of(context).simpleText35,
+                style: const TextStyle(
                   fontWeight: FontWeight.w500,
                 ),
               ),
@@ -152,7 +153,7 @@ class ProfileTab extends ConsumerWidget {
           ),
         ),
         LabelButton(
-          label: "Cerrar sesión",
+          label: S.of(context).simpleText36,
           value: "",
           onPressed: () async {
             await sessionProvider.read.signOut();
